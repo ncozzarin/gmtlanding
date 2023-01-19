@@ -9,7 +9,8 @@ export default function Navbar({ fixed }) {
   return (
     <>
       <nav className="relative h-32 flex flex-wrap items-center justify-between px-2 py-3 mb-3 mr-2">
-        <div className="container flex flex-wrap items-center justify-between">
+        <div className="
+        w-full  flex flex-wrap items-center justify-between">
           <div className=" " >
             <img
               className=" w-32 leading-relaxed inline-block whitespace-nowrap uppercase text-red-500"
