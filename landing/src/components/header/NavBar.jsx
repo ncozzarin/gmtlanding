@@ -61,8 +61,11 @@ export default function Navbar({ fixed }) {
             </li>
             </ul>
           </div>
-          <div className=" text-neutral-500" >
+          <div className=" text-neutral-500 space-x-3.5 flex" >
+          <h3>EN</h3>
+          <h3>FR</h3>
           <AiOutlineUser size={30} />
+          
           </div>
         </div>
       </nav>

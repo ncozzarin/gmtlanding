@@ -6,24 +6,14 @@ let count = 0;
 let slideInterval;
 const Cards = () => {
 
-  const slideRef = useRef();
-  useEffect(() => {
-    startSlider();
-    slideRef.current.addEventListener("animationend", removeAnimation);
-    slideRef.current.addEventListener("mouseenter", pauseSlider);
-    slideRef.current.addEventListener("mouseleave", startSlider);
-    return () => {
-      clearInterval(slideInterval);
-   };
-  }, []);
-
   const startSlider = () => {
     slideInterval = setInterval(() => {
       handleOnNextClick();
-    }, 3000);
+    }, 5000);
   };
 
   const pauseSlider = () => {
+    console.log("mouse entered");
     clearInterval(slideInterval);
   };
 
@@ -41,8 +31,24 @@ const Cards = () => {
     const productsLength = featuredImages.length;
     count = (currentIndex + productsLength - 1) % productsLength;
     setCurrentIndex(count);
+    console.log(count);
+    console.log(currentIndex);
+    console.log(productsLength);
     slideRef.current.classList.add("fade-anim");
   };
+
+  const slideRef = useRef();
+  useEffect(() => {
+    startSlider();
+    slideRef.current.addEventListener("animationend", removeAnimation);
+    slideRef.current.addEventListener("mouseenter", pauseSlider);
+    slideRef.current.addEventListener("mouseleave", startSlider);
+    return () => {
+      clearInterval(slideInterval);
+   };
+  }, []);
+
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
 return (
