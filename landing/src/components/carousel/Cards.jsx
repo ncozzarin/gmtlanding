@@ -48,19 +48,20 @@ const Cards = () => {
 return (
   <div>
     <div className=" mx-auto">
-      <div className="w-full  relative select-none" ref={slideRef}>
-        <div className="aspect-w-16 aspect-h-9  ">
-          <img src={featuredImages[currentIndex]} alt=""  />
-        </div>
-
-        <div className="absolute w-full top-96 transform -translate-y-1/2 flex justify-between items-start px-3">
-          <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full bg-opacity-50 cursor-pointer hover:text-blue-300 transition">
+      <div className="w-full h-1/2 relative select-none" ref={slideRef}>
+        <div className=" mx-auto object-fill ">
+          <img src={featuredImages[currentIndex]} alt="" className='rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' />
+          <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start px-3">
+          <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full bg-opacity-50 opacity-25 hover:opacity-100 cursor-pointer hover:hover:text-white transition">
             <AiOutlineLeft size={50} />
           </button>
-          <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full bg-opacity-50 cursor-pointer hover:text-blue-300 transition">
+          <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full opacity-25 bg-opacity-50 cursor-pointer hover:opacity-100 hover:text-white transition">
             <AiOutlineRight size={50} />
           </button>
         </div>
+        </div>
+
+
       </div>
     </div>
   </div>
