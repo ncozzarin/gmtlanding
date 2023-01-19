@@ -75,12 +75,9 @@ export default function ChangeCard() {
   }
 
     return (
-      <><div className="sm:py-20 pb-44 px-2 py-2 sm:px-48 justify-center flex flex-col h-[60vh]  pt-40 mt-40 mb-20 ">
-        <h2 className="mt-4 font-bold  text-2xl text-black ">Taux de change du jour</h2>
-        <h3 className="mt-4 text-xl leading-8 text-gray-800 sm:text-left sm:w-1/2 mb-4">GMT Change, leader sur le marché du change à Genève, avec certainement un des meilleurs taux de change à la vente et à l’achat</h3>
-        <h3 className="mt-4 text-xl leading-8 text-gray-800 sm:text-left sm:w-1/2 mb-4">Ce taux est susceptible d’être modifié à tout moment.</h3>
-        <div class="bg-white p-6 rounded-lg sm:py-24 shadow-lg  text-center	">
-          <h2 class="text-2xl font-bold mb-2 text-gray-800">Convert {currencyOption1.name} to {currencyOption2.name}</h2>
+      <><div className="bg-neutral-100 pt-8 pb-20 pr-20 pl-20 rounded-r-xl rounded-tr-xl w-full shadow-lg  text-left	 rounded-b-xl">
+
+          <h2 class="font-bold text-left pb-12 md:text-l text-xl text-blue-700 pt-4">Convert {currencyOption1.name} to {currencyOption2.name}</h2>
           <div class="flex sm:items-end justify-center sm:flex-row flex-col ">
             <div className="sm:w-1/4 sm:pb-0 pb-4 ">
               <MoneyInput onChange={e => changeCalculation1(e.target.value)} value={value1}></MoneyInput>
@@ -101,7 +98,6 @@ export default function ChangeCard() {
               <MoneyInput value={value2} onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
             </div>
           </div>
-        </div>
       </div>
       
 {/*      <div class="sm:h-[40vh]  justify-start flex flex-col w-screen shadow-lg  sm:text-center pt-32 sm:pt-12 sm:mt-0">
