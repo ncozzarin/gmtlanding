@@ -99,7 +99,7 @@ export default function CurrencySelector({selectCurrency , swap}) {
                         {selected ? (
                           <span
                             className={classNames(
-                              active ? 'text-white' : 'text-indigo-600',
+                              active ? 'text-white' : 'text-blue-700',
                               'absolute inset-y-0 right-0 flex items-center pr-4'
                             )}
                           >
