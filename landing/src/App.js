@@ -3,6 +3,8 @@ import Cards from './components/carousel/Cards';
 import CurrencyConverter from './components/currencyConverter/CurrencyConverter';
 import Navbar from './components/header/NavBar';
 import Maps from './components/maps/Maps';
+import GoldBanner from './assets/content-gold.svg';
+
 
 function App() {
   return (
@@ -19,7 +21,10 @@ function App() {
   </div>
   <div className='pt-16'>
     <CurrencyConverter></CurrencyConverter>
-  </div>  
+  </div>
+  <div className='pt-48 pb-20 '>
+    <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' src={GoldBanner}></img>
+  </div>
 </div>
   );
 }
