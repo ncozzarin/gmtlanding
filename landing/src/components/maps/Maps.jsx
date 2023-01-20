@@ -6,10 +6,10 @@ import rousseauMap from '../../assets/rousseau-map.svg';
 
 export default function Maps() {
   return (
-    <div className="bg-neutral-100 p-12 rounded-r-xl rounded-tr-xl w-full rounded-b-xl">
+    <div className="bg-neutral-100 p-12 rounded-r-xl rounded-tr-xl drop-shadow-xl w-full rounded-b-xl">
         <h2 className="font-bold text-center pt-12 md:text-4xl text-xl text-blue-700 pt-1">NOS AGENCES</h2>
         <hr class="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl"/>
-        <div className="flex justify-center space-x-40 mt-8">
+        <div className="flex drop-shadow-xl justify-center space-x-40 mt-8">
             <div>
             <a href="https://goo.gl/maps/dRh1ze8od6NdbY637">
                 <img src={rousseauMap} alt="" />

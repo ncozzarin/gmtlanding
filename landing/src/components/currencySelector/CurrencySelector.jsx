@@ -41,7 +41,7 @@ export default function CurrencySelector({selectCurrency , swap}) {
       {({ open }) => (
         <>
           <div className="h-min align-bottom">
-            <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+            <Listbox.Button className="relative w-full cursor-pointer rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
               <span className="flex items-center">
                 <img src={selected.avatar} alt="" className="h-6 w-6 flex-shrink-0 rounded-full" />
                 <span className="ml-3 block truncate">{selected.name}</span>
@@ -58,14 +58,14 @@ export default function CurrencySelector({selectCurrency , swap}) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-42 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+              <Listbox.Options className="absolute  z-10 mt-1 max-h-56 w-42 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                 {currency.map((person) => (
                   <Listbox.Option
                     key={person.id}
                     className={({ active }) =>
                       classNames(
-                        active ? 'text-white bg-indigo-600' : 'text-gray-900',
-                        'relative cursor-default select-none py-2 pl-3 pr-9'
+                        active ? 'text-white bg-blue-700' : 'text-neutral-500',
+                        'relative cursor-pointer select-none py-2 pl-3 pr-9'
                       )
                     }
                     value={person}
