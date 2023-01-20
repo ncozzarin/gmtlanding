@@ -61,7 +61,7 @@ return (
           <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full bg-opacity-50 opacity-25 hover:opacity-100 cursor-pointer hover:hover:text-white transition">
             <AiOutlineLeft size={50} />
           </button>
-          <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full opacity-25 bg-opacity-50 cursor-pointer hover:opacity-100 hover:text-white transition">
+          <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full opacity-25 bg-opacity-50 cursor-pointer hover:opacity-100 transition">
             <AiOutlineRight size={50} />
           </button>
         </div>

@@ -12,12 +12,13 @@ export default function Navbar({ fixed }) {
         <div className="
         w-full  flex flex-wrap items-center justify-between">
           <div className=" " >
+          <a href="">
             <img
-              className=" w-32 leading-relaxed inline-block whitespace-nowrap uppercase text-red-500"
+              className=" w-32 leading-relaxed inline-block whitespace-nowrap uppercase"
               src={gmtLogo}
             >
-
             </img>
+            </a>
             <button
               className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
@@ -63,10 +64,17 @@ export default function Navbar({ fixed }) {
             </ul>
           </div>
           <div className=" text-neutral-500  space-x-3.5 flex" >
-          <h3>EN</h3>
-          <h3>FR</h3>
-          <AiOutlineUser size={30} />
-          
+          <a href="">
+            <h3 className="  hover:font-bold ">EN</h3>
+          </a>
+          <a href="">
+            <h3 className="  hover:font-bold ">FR</h3>
+          </a>
+          <a href="">
+            <div className="  hover:text-black ">
+            <AiOutlineUser className="  hover:color-black " size={30} />
+            </div>
+          </a>
           </div>
         </div>
       </nav>
