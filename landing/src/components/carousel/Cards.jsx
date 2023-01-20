@@ -53,10 +53,10 @@ const Cards = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 return (
   <div>
-    <div className=" mx-auto">
+    <div className="drop-shadow-xl  mx-auto">
       <div className="w-full h-1/2 relative select-none" ref={slideRef}>
         <div className=" mx-auto object-fill ">
-          <img src={featuredImages[currentIndex]} alt="" className='rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' />
+          <img src={featuredImages[currentIndex]} alt="" className='w-full	' />
           <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start px-3">
           <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full bg-opacity-50 opacity-25 hover:opacity-100 cursor-pointer hover:hover:text-white transition">
             <AiOutlineLeft size={50} />
