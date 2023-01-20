@@ -23,18 +23,14 @@ const currency  = [
 export default function ChangeCard() {
 
 
-  const [currencyOption1, setCurrencyOption1] = useState(currency[0]);
-  const [currencyOption2, setCurrencyOption2] = useState(currency[0]);
-  const [value1, setValue1] = useState(0);
+  const [currencyOption1, setCurrencyOption1] = useState(currency[1]);
+  const [currencyOption2, setCurrencyOption2] = useState(currency[2]);
+  const [value1, setValue1] = useState(8);
   const [value2, setValue2] = useState(0);
 
   useEffect(()=>{
     changeCalculation1(value1);
-  }, [currencyOption1]);
-
-  useEffect(()=>{
-    changeCalculation2(value2);
-  }, [currencyOption2]);
+  }, []);
 
   const selectCurrency1 = cur => {
     setCurrencyOption1(cur);
@@ -72,6 +68,9 @@ export default function ChangeCard() {
     const temp2 = currencyOption1;
     setCurrencyOption1(temp1);
     setCurrencyOption2(temp2);
+    setValue1(value2);
+    setValue2(value1);
+
   }
 
     return (
