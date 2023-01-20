@@ -4,6 +4,7 @@ import CurrencyConverter from './components/currencyConverter/CurrencyConverter'
 import Navbar from './components/header/NavBar';
 import Maps from './components/maps/Maps';
 import GoldBanner from './assets/content-gold.svg';
+import MoneyGram from './components/moneyGram/moneyGram';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
   <div className='pt-48 pb-20 '>
     <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' src={GoldBanner}></img>
   </div>
+  <MoneyGram></MoneyGram>
 </div>
   );
 }
