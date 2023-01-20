@@ -18,6 +18,21 @@ const currency  = [
     name: 'EUR',
     avatar:'https://m.media-amazon.com/images/I/614JLqsvMoL._AC_SL1500_.jpg',
   },
+  {
+    id: 4,
+    name: 'GBP',
+    avatar:'https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg',
+  },
+  {
+    id: 5,
+    name: 'JPY',
+    avatar:'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png',
+  },
+  {
+    id: 6,
+    name: 'CAD',
+    avatar:'https://www.worldatlas.com/img/flag/ca-flag.jpg',
+  },
 ]
 
 export default function ChangeCard() {
@@ -81,16 +96,16 @@ export default function ChangeCard() {
             <div className="sm:w-1/4 sm:pb-0 pb-4 ">
               <MoneyInput onChange={e => changeCalculation1(e.target.value)} value={value1}></MoneyInput>
             </div>
-            <div className="sm:pl-8 sm:pb-0 pb-4">
+            <div className="sm:pl-8 sm:pb-0 hover:drop-shadow-xl pb-4">
               <CurrencySelector selectCurrency={selectCurrency1} swap={currencyOption1}></CurrencySelector>
             </div>
-            <button onClick={swapFC} className="inline-flex items-center self-center justify-center w-10 h-10 mx-2 text-pink-100 transition-colors duration-150 bg-blue-600 rounded-full focus:shadow-outline hover:bg-blue-800">
+            <button onClick={swapFC} className="inline-flex hover:drop-shadow-xl items-center self-center justify-center w-10 h-10 mx-2 text-pink-100 transition-colors duration-150 bg-blue-600 rounded-full focus:shadow-outline hover:bg-blue-800">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
               </svg>
 
             </button>
-            <div className="sm:pr-8 sm:pt-0 pt-4">
+            <div className="sm:pr-8 hover:drop-shadow-xl sm:pt-0 pt-4">
               <CurrencySelector selectCurrency={selectCurrency2} swap={currencyOption2}></CurrencySelector>
             </div>
             <div className="sm:w-1/4 sm:pt-0 pt-4">

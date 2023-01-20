@@ -1,6 +1,4 @@
 import React from "react";
-import riveMap from '../../assets/rive-map.svg';
-import rousseauMap from '../../assets/rousseau-map.svg';
 import ChangeCard from "../changeCard/ChangeCard";
 
 

@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
-const currency = [
+const currency  = [
   {
     id: 1,
     name: 'USD',
@@ -17,6 +17,21 @@ const currency = [
     id: 3,
     name: 'EUR',
     avatar:'https://m.media-amazon.com/images/I/614JLqsvMoL._AC_SL1500_.jpg',
+  },
+  {
+    id: 4,
+    name: 'GBP',
+    avatar:'https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg',
+  },
+  {
+    id: 5,
+    name: 'JPY',
+    avatar:'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png',
+  },
+  {
+    id: 6,
+    name: 'CAD',
+    avatar:'https://www.worldatlas.com/img/flag/ca-flag.jpg',
   },
 ]
 
@@ -41,13 +56,13 @@ export default function CurrencySelector({selectCurrency , swap}) {
       {({ open }) => (
         <>
           <div className="h-min align-bottom">
-            <Listbox.Button className="relative w-full cursor-pointer rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+            <Listbox.Button className="relative w-full cursor-pointer rounded-md border border-neutral-500 bg-white py-2 pl-3 pr-12 text-left shadow-sm focus:border-blue-700 focus:outline-none focus:ring-1 focus:ring-blue-700 sm:text-sm">
               <span className="flex items-center">
                 <img src={selected.avatar} alt="" className="h-6 w-6 flex-shrink-0 rounded-full" />
                 <span className="ml-3 block truncate">{selected.name}</span>
               </span>
               <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
-                <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                <ChevronUpDownIcon className="h-5 w-5 text-neutral-500" aria-hidden="true" />
               </span>
             </Listbox.Button>
 
