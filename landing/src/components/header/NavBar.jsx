@@ -1,6 +1,7 @@
 import React from "react";
 import gmtLogo from '../../assets/gmt-logo.svg';
 import { AiOutlineUser } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 
 
@@ -64,12 +65,12 @@ export default function Navbar({ fixed }) {
             </ul>
           </div>
           <div className=" text-neutral-500  space-x-3.5 flex" >
-          <a href="">
+          <Link to="/en">
             <h3 className="  hover:font-bold ">EN</h3>
-          </a>
-          <a href="">
+          </Link>
+          <Link to="/fr">
             <h3 className="  hover:font-bold ">FR</h3>
-          </a>
+            </Link>
           <a href="">
             <div className="  hover:text-black ">
             <AiOutlineUser className="  hover:color-black " size={30} />
