@@ -10,8 +10,8 @@ module.exports = function(app) {
       logLevel: 'debug',
       secure:false,
       onProxyReq: (proxyReq, req, res) => {
-        proxyReq.setHeader('cid', '48');
-        proxyReq.setHeader('user', 'screen_user_48');
+        proxyReq.setHeader('cid', '49');
+        proxyReq.setHeader('user', 'screen_user_49');
         proxyReq.setHeader('password', 'puzzl3');
         proxyReq.setHeader('output_type', 'json');
       }

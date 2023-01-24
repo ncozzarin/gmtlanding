@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import CurrencySelector from "../currencySelector/CurrencySelector";
 import MoneyInput from "../MoneyImput/MoneyImput";
-import {getCurrencyData} from '../../utils/fetchService';
-import axios from 'axios';
+import { fetchData } from '../../utils/fetchService';
 
 const currency  = [
   {
@@ -39,7 +38,7 @@ const currency  = [
 
 export default function ChangeCard() {
 
-  const getData = async () => await getCurrencyData();
+  // const getData = async () => await fetchData();
   const [currencyOption1, setCurrencyOption1] = useState(currency[1]);
   const [currencyOption2, setCurrencyOption2] = useState(currency[2]);
   const [value1, setValue1] = useState(1);
@@ -47,9 +46,12 @@ export default function ChangeCard() {
 
   const [currencyData, setCurrencyData] = useState(null);
   useEffect(() => {
-      axios.get('/get_currency',  { withCredentials: true ,  headers: { 'cid': '49', 'user': 'screen_user_49', 'password': 'puzzl3', 'output_type': 'json' } })
-          .then(response => console.log(response))
-          .catch(error => console.error(error));
+    //  getData()
+    //      .then(response => console.log(response))
+    //      .catch(error => console.error(error));
+    fetch('https://ischange.li/icloud/get_currency.php?cid=49&user=screen_user_49&password=puzzl3&output_type=json')
+    .then(response => console.log(response))
+    .then(data => console.log(data));
   }, []);
 
   useEffect(()=>{
@@ -102,10 +104,10 @@ export default function ChangeCard() {
 
           <h2 class="font-bold text-left pb-12 md:text-l text-xl text-blue-700 pt-4">Convert {currencyOption1.name} to {currencyOption2.name}</h2>
           <div class="flex sm:items-end justify-center sm:flex-row flex-col ">
-            <div className="sm:w-1/4 sm:pb-0 pb-4 ">
+            <div className="sm:w-1/4 sm:pb-0 pb-4 focus:border-blue-700">
               <MoneyInput onChange={e => changeCalculation1(e.target.value)} value={value1}></MoneyInput>
             </div>
-            <div className="sm:pl-8 sm:pb-0 hover:drop-shadow-xl pb-4">
+            <div className="sm:pl-8 sm:pb-0 hover:drop-shadow-xl pb-12">
               <CurrencySelector selectCurrency={selectCurrency1} swap={currencyOption1}></CurrencySelector>
             </div>
             <button onClick={swapFC} className="inline-flex hover:drop-shadow-xl items-center self-center justify-center w-10 h-10 mx-2 text-pink-100 transition-colors duration-150 bg-blue-600 rounded-full focus:shadow-outline hover:bg-blue-800">

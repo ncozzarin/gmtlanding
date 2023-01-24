@@ -56,7 +56,7 @@ export default function CurrencySelector({selectCurrency , swap}) {
       {({ open }) => (
         <>
           <div className="h-min align-bottom">
-            <Listbox.Button className="relative w-full cursor-pointer rounded-md border border-neutral-500 bg-white py-2 pl-3 pr-12 text-left shadow-sm focus:border-blue-700 focus:outline-none focus:ring-1 focus:ring-blue-700 sm:text-sm">
+            <Listbox.Button className="relative w-36 cursor-pointer rounded-md border border-neutral-500 bg-white py-2 pl-3 pr-12 text-left shadow-sm focus:border-blue-700 focus:outline-none sm:text-sm">
               <span className="flex items-center">
                 <img src={selected.avatar} alt="" className="h-6 w-6 flex-shrink-0 rounded-full" />
                 <span className="ml-3 block truncate">{selected.name}</span>
@@ -73,7 +73,7 @@ export default function CurrencySelector({selectCurrency , swap}) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="absolute  z-10 mt-1 max-h-56 w-42 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+              <Listbox.Options className="absolute  z-10 mt-1 max-h-56 w-36 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                 {currency.map((person) => (
                   <Listbox.Option
                     key={person.id}
