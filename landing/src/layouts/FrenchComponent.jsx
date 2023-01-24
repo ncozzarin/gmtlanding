@@ -2,7 +2,7 @@ import Cards from '../components/carousel/Cards';
 import CurrencyConverter from '../components/currencyConverter/CurrencyConverter';
 import Navbar from '../components/header/NavBar';
 import Maps from '../components/maps/Maps';
-import GoldBanner from '../assets/content-gold.svg';
+import GoldBanner from '../assets/gold-banner-fr.svg';
 import MoneyGram from '../components/moneyGram/moneyGram';
 import Footer from '../components/footer/Footer';
 

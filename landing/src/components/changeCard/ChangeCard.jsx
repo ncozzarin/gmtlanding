@@ -102,7 +102,7 @@ export default function ChangeCard() {
     return (
       <><div className="bg-neutral-100 pt-8 pb-20 pr-20 pl-20 rounded-r-xl rounded-tr-xl w-full shadow-lg  text-left	 rounded-b-xl">
 
-          <h2 class="font-bold text-left pb-12 md:text-l text-xl text-blue-700 pt-4">Convert {currencyOption1.name} to {currencyOption2.name}</h2>
+          <h2 class="font-bold text-left pb-12 md:text-l text-xl text-blue-700 pt-4">Convertir {currencyOption1.name} en {currencyOption2.name}</h2>
           <div class="flex sm:items-end justify-center sm:flex-row flex-col ">
             <div className="sm:w-1/4 sm:pb-0 pb-4 focus:border-blue-700">
               <MoneyInput onChange={e => changeCalculation1(e.target.value)} value={value1}></MoneyInput>
@@ -124,29 +124,6 @@ export default function ChangeCard() {
             </div>
           </div>
       </div>
-      
-{/*      <div class="sm:h-[40vh]  justify-start flex flex-col w-screen shadow-lg  sm:text-center pt-32 sm:pt-12 sm:mt-0">
-        <h2 className="mt-4 font-bold  text-2xl text-black ">Compare our rates</h2>
-        <h3 className=" text-xl leading-8 text-gray-800 sm:text-center">Compare our Euro exchange rate today to see how many Euro 500 CHF will buy you</h3>
-          <div className="flex flex-col text-center sm:flex-row space-between w-screen content-center justify-items-center justify-center gap-x-44 gap-y-4 pt-4">
-            <div  className="text-blue-800 font-semibold">
-              <h2>$550</h2>
-              <h3>GMT Change</h3>
-            </div>
-            <div className="text-gray-600">
-              <h2>$500</h2>
-              <h3>Migros Change</h3>
-            </div>
-            <div className="text-gray-600">
-              <h2>$498</h2>
-              <h3>Change X</h3>
-            </div>
-            <div className="text-gray-600">
-              <h2>$502</h2>
-              <h3>Revolut</h3>
-            </div>
-          </div>
-    </div> */}
       </>
 
     )

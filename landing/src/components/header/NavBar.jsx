@@ -43,7 +43,7 @@ export default function Navbar({ fixed }) {
                   className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
                   href="#pablo"
                 >
-                  <span className="">GOLD</span>
+                  <span className="">OR</span>
                 </a>
             </li>
             <li className="nav-item">
@@ -51,7 +51,7 @@ export default function Navbar({ fixed }) {
                   className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
                   href="#pablo"
                 >
-                  <span className="">TRANSFER</span>
+                  <span className="">TRANSFERT</span>
                 </a>
             </li>
             <li className="nav-item">
@@ -59,7 +59,7 @@ export default function Navbar({ fixed }) {
                   className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500  "
                   href="#pablo"
                 >
-                  <span className="">COMPANY</span>
+                  <span className="">SOCIÉTÉ</span>
                 </a>
             </li>
             </ul>
@@ -69,7 +69,7 @@ export default function Navbar({ fixed }) {
             <h3 className="  hover:font-bold ">EN</h3>
           </Link>
           <Link to="/fr">
-            <h3 className="  hover:font-bold ">FR</h3>
+            <h3 className="  font-bold ">FR</h3>
             </Link>
           <a href="">
             <div className="  hover:text-black ">

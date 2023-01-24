@@ -17,10 +17,10 @@ export default function Footer() {
         </div>
         <div className="mx-auto flex-column justify-center space-x-8">
             <div className="mx-auto flex justify-center space-x-8">
-                <p className="text-white font-light text-xl">ABOUT</p>
-                <p className="text-white font-light text-xl">PRIVACY POLICY</p>
-                <p className="text-white font-light text-xl">LICENSING</p>
-                <p className="text-white font-light text-xl">CONTACT</p>
+                <p className="text-white font-light text-xl">À PROPOS</p>
+                <p className="text-white font-light text-xl">SERVICE</p>
+                <p className="text-white font-light text-xl">MARQUE</p>
+                <p className="text-white font-light text-xl">AIDE</p>
             </div>
             <div className="mx-auto mt-8 flex justify-center space-x-8">
                 <p className="text-white font-light text-l">© 2022 GMT™. All Rights Reserved.</p>
