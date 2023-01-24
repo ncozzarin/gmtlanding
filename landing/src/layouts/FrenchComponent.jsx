@@ -14,19 +14,23 @@ function FrenchComponent() {
       <div>
         <Cards></Cards>
       </div>
+      <div id="company" className='h-screen'>
       <h2 className="font-bold text-center md:text-4xl text-xl pt-16 text-blue-700 ">GMT CHANGE</h2>
       <hr class="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
       <h3 className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Change - Métaux précieux - Transfert de fonds</h3>
       <div className='pt-16'>
         <Maps></Maps>
       </div>
-      <div className='pt-16'>
+      </div>
+      <div className='pt-16 h-screen' id="change">
         <CurrencyConverter></CurrencyConverter>
       </div>
-      <div className='pt-48 pb-20 '>
+      <div className='pt-48 pb-20 ' id="gold">
         <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' src={GoldBanner}></img>
       </div>
-      <MoneyGram></MoneyGram>
+      <div className='h-screen' id="transfert">
+        <MoneyGram></MoneyGram>
+      </div>
       <Footer></Footer>
     </div><div>
         

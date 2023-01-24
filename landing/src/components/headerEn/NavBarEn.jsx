@@ -33,7 +33,7 @@ export default function NavBarEn({ fixed }) {
             <li className="nav-item">
                 <a
                   className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
-                  href="#pablo"
+                  href="#change"
                 >
                   <span className="">EXCHANGE</span>
                 </a>
@@ -41,7 +41,7 @@ export default function NavBarEn({ fixed }) {
             <li className="nav-item">
                 <a
                   className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
-                  href="#pablo"
+                  href="#gold"
                 >
                   <span className="">GOLD</span>
                 </a>
@@ -49,7 +49,7 @@ export default function NavBarEn({ fixed }) {
             <li className="nav-item">
                 <a
                   className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
-                  href="#pablo"
+                  href="#transfer"
                 >
                   <span className="">TRANSFER</span>
                 </a>
@@ -57,7 +57,7 @@ export default function NavBarEn({ fixed }) {
             <li className="nav-item">
                 <a
                   className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500  "
-                  href="#pablo"
+                  href="#company"
                 >
                   <span className="">COMPANY</span>
                 </a>

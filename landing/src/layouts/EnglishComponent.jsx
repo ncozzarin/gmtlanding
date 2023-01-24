@@ -14,19 +14,23 @@ function EnglishComponent() {
       <div>
         <CardsEn></CardsEn>
       </div>
+      <div className='h-screen' id="company">
       <h2 className="font-bold text-center md:text-4xl text-xl pt-16 text-blue-700 ">GMT CHANGE</h2>
       <hr class="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
-      <h3 className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Change - Precious metals - Money transfers</h3>
-      <div className='pt-16'>
+      <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Change - Precious metals - Money transfers</h3>
+      <div  className='pt-16'>
         <MapsEn></MapsEn>
       </div>
-      <div className='pt-16'>
+      </div>
+      <div id="change" className='pt-16 h-screen'>
         <CurrencyConverterEn></CurrencyConverterEn>
       </div>
-      <div className='pt-48 pb-20 '>
+      <div id="gold" className='pt-48 pb-20 '>
         <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' src={GoldBanner}></img>
       </div>
+      <div id="transfer" className='h-screen'>
       <MoneyGramEn></MoneyGramEn>
+      </div>
       <FooterEn></FooterEn>
     </div><div>
         
