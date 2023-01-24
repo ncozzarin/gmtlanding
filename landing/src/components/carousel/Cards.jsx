@@ -31,9 +31,6 @@ const Cards = () => {
     const productsLength = featuredImages.length;
     count = (currentIndex + productsLength - 1) % productsLength;
     setCurrentIndex(count);
-    console.log(count);
-    console.log(currentIndex);
-    console.log(productsLength);
     slideRef.current.classList.add("fade-anim");
   };
 

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import CurrencySelector from "../currencySelector/CurrencySelector";
 import MoneyInput from "../MoneyImput/MoneyImput";
+import {getCurrencyData} from '../../utils/fetchService';
+import axios from 'axios';
 
 const currency  = [
   {
@@ -37,11 +39,18 @@ const currency  = [
 
 export default function ChangeCard() {
 
-
+  const getData = async () => await getCurrencyData();
   const [currencyOption1, setCurrencyOption1] = useState(currency[1]);
   const [currencyOption2, setCurrencyOption2] = useState(currency[2]);
   const [value1, setValue1] = useState(1);
   const [value2, setValue2] = useState(0);
+
+  const [currencyData, setCurrencyData] = useState(null);
+  useEffect(() => {
+      axios.get('/get_currency',  { withCredentials: true ,  headers: { 'cid': '49', 'user': 'screen_user_49', 'password': 'puzzl3', 'output_type': 'json' } })
+          .then(response => console.log(response))
+          .catch(error => console.error(error));
+  }, []);
 
   useEffect(()=>{
     changeCalculation1(value1);
