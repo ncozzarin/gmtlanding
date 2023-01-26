@@ -14,7 +14,7 @@ function EnglishComponent() {
   useEffect(() => {
     setInterval(() => {
       setCurrentDate(new Date().getUTCDay());
-    }, 800000);
+    }, 8000);
   }, []);
 
   return (
@@ -37,18 +37,18 @@ function EnglishComponent() {
           <hr class="border-2 mt-6 m-auto border-yellow-500 w-1/12 max-w-{20px} drop-shadow-xl" />
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
           <div class="grid grid-cols-2 w-3/6 m-auto ">
-            <h3  className={`text-${(currentDay !== 'Sunday' && currentDay !== 'Sunday') ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay !== 'Sunday' && currentDay !== 'Sunday') ? 'bold' : 'light'} text-center text-2xl items-center leading-snug`}>Monday - Friday</h3>
-            <h3  className={`text-${(currentDay !== 'Sunday' && currentDay !== 'Sunday') ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay !== 'Sunday' && currentDay !== 'Sunday') ? 'bold' : 'light'} text-center text-2xl items-center leading-snug `}>8am - 10pm</h3>
+            <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6) ? 'bold' : 'light'} text-center text-2xl items-center leading-snug`}>Monday - Friday</h3>
+            <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6 ) ? 'bold' : 'light'} text-center text-2xl items-center leading-snug `}>8am - 10pm</h3>
           </div>
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
           <div class="grid grid-cols-2 w-3/6 m-auto ">
-            <h3  className={`text-${currentDay === 'Saturday' ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 'Saturday') ? 'bold' : 'light'} text-center text-2xl items-center leading-snug`}>Saturday</h3>
-            <h3  className={`text-${(currentDay === 'Saturday') ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 'Saturday') ? 'bold' : 'light'}  text-center text-2xl items-center leading-snug `}>8am - 10pm</h3>
+            <h3  className={`text-${currentDay === 6  ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'} text-center text-2xl items-center leading-snug`}>Saturday</h3>
+            <h3  className={`text-${(currentDay  === 6 ) ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'}  text-center text-2xl items-center leading-snug `}>8am - 10pm</h3>
           </div>
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
           <div class="grid grid-cols-2 w-3/6 m-auto ">
-            <h3  className={`text-${currentDay === 'Sunday' ? 'red-500' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 'Sunday') ? 'bold' : 'light'}  text-center text-2xl items-center leading-snug`}>Sunday</h3>
-            <h3  className={`text-${(currentDay === 'Sunday') ? 'red-500' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 'Sunday') ? 'bold' : 'light'}  text-center text-2xl items-center leading-snug `}>Closed</h3>
+            <h3  className={`text-${currentDay === 0 ? 'red-500' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 0) ? 'bold' : 'light'}  text-center text-2xl items-center leading-snug`}>Sunday</h3>
+            <h3  className={`text-${(currentDay === 0) ? 'red-500' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 0) ? 'bold' : 'light'}  text-center text-2xl items-center leading-snug `}>Closed</h3>
           </div>
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
       </div>
