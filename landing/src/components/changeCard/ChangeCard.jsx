@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import CurrencySelector from "../currencySelector/CurrencySelector";
 import MoneyInput from "../MoneyImput/MoneyImput";
-import { fetchData } from '../../utils/fetchService';
 
 const currency  = [
   {

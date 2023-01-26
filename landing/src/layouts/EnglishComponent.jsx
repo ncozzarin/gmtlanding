@@ -24,6 +24,24 @@ function EnglishComponent() {
       </div>
       <div id="change" className='pt-16 h-screen'>
         <CurrencyConverterEn></CurrencyConverterEn>
+          <h2 className="font-bold text-center md:text-4xl text-xl pt-16 text-blue-700 ">OPENING HOURS</h2>
+          <hr class="border-2 mt-6 m-auto border-yellow-500 w-1/12 max-w-{20px} drop-shadow-xl" />
+          <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
+          <div class="grid grid-cols-2 w-3/6 m-auto ">
+            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Monday - Friday</h3>
+            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">8am - 10pm</h3>
+          </div>
+          <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
+          <div class="grid grid-cols-2 w-3/6 m-auto ">
+            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Saturday</h3>
+            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">8am - 10pm</h3>
+          </div>
+          <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
+          <div class="grid grid-cols-2 w-3/6 m-auto ">
+            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Sunday</h3>
+            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">8am - 10pm</h3>
+          </div>
+          <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
       </div>
       <div id="gold" className='pt-48 pb-20 '>
         <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' src={GoldBanner}></img>
