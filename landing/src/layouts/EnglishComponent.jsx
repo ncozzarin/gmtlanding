@@ -5,9 +5,18 @@ import CurrencyConverterEn from '../components/currencyConverterEn/currencyConve
 import MoneyGramEn from '../components/moneyGramEn/moneyGramEn';
 import FooterEn from '../components/footerEn/FooterEn';
 import NavBarEn from '../components/headerEn/NavBarEn';
+import { useEffect, useState } from 'react';
 
 
 function EnglishComponent() {
+  const [currentDay, setCurrentDate] = useState(new Date().getUTCDay());
+
+  useEffect(() => {
+    setInterval(() => {
+      setCurrentDate(new Date().getUTCDay());
+    }, 800000);
+  }, []);
+
   return (
     <><div className='w-9/12 m-auto'>
       <NavBarEn></NavBarEn>
@@ -28,18 +37,18 @@ function EnglishComponent() {
           <hr class="border-2 mt-6 m-auto border-yellow-500 w-1/12 max-w-{20px} drop-shadow-xl" />
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
           <div class="grid grid-cols-2 w-3/6 m-auto ">
-            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Monday - Friday</h3>
-            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">8am - 10pm</h3>
+            <h3  className={`text-${(currentDay !== 'Sunday' && currentDay !== 'Sunday') ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay !== 'Sunday' && currentDay !== 'Sunday') ? 'bold' : 'light'} text-center text-2xl items-center leading-snug`}>Monday - Friday</h3>
+            <h3  className={`text-${(currentDay !== 'Sunday' && currentDay !== 'Sunday') ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay !== 'Sunday' && currentDay !== 'Sunday') ? 'bold' : 'light'} text-center text-2xl items-center leading-snug `}>8am - 10pm</h3>
           </div>
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
           <div class="grid grid-cols-2 w-3/6 m-auto ">
-            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Saturday</h3>
-            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">8am - 10pm</h3>
+            <h3  className={`text-${currentDay === 'Saturday' ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 'Saturday') ? 'bold' : 'light'} text-center text-2xl items-center leading-snug`}>Saturday</h3>
+            <h3  className={`text-${(currentDay === 'Saturday') ? 'blue-700' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 'Saturday') ? 'bold' : 'light'}  text-center text-2xl items-center leading-snug `}>8am - 10pm</h3>
           </div>
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
           <div class="grid grid-cols-2 w-3/6 m-auto ">
-            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Sunday</h3>
-            <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">8am - 10pm</h3>
+            <h3  className={`text-${currentDay === 'Sunday' ? 'red-500' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 'Sunday') ? 'bold' : 'light'}  text-center text-2xl items-center leading-snug`}>Sunday</h3>
+            <h3  className={`text-${(currentDay === 'Sunday') ? 'red-500' : 'neutral-500'} px-3 py-2 m-auto font-${(currentDay === 'Sunday') ? 'bold' : 'light'}  text-center text-2xl items-center leading-snug `}>Closed</h3>
           </div>
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
       </div>
