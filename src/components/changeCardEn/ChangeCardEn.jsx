@@ -40,38 +40,82 @@ export default function ChangeCardEn() {
   // const getData = async () => await fetchData();
   const [currencyOption1, setCurrencyOption1] = useState(currency[1]);
   const [currencyOption2, setCurrencyOption2] = useState(currency[2]);
-  const [value1, setValue1] = useState(1);
+  const [value1, setValue1] = useState(2);
   const [value2, setValue2] = useState(0);
 
-  const [currencyData, setCurrencyData] = useState(null);
+   // currencies options for both selectors
+   const [options1, setOptions1] = useState(currency);
+   const [options2, setOptions2] = useState(currency);
+
+  const [rates, setRates] = useState(null);
+
   useEffect(() => {
-    //  getData()
-    //      .then(response => console.log(response))
-    //      .catch(error => console.error(error));
+    fetch('https://api-prod.ischange.li/v1/isscreen/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        user: 'screen_user_29',
+        password: 'vR4M7UKj2hL*#yrD1vFAtfQW',
+        cid: '00000029'
+      })
+    })
+      .then(res => res.json())
+      .then(
+        (result) => {
+          fetch('https://api-prod.ischange.li/v1/isscreen/rates', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${result.status.data.token}`
+            },
+            body: JSON.stringify({
+              cid: '00000029',
+              checksum: result.status.data.checksum,
+              curr_list: 'EUR, USD , JPY, GBP, CAD'
+            })
+          })
+            .then(res => res.json())
+            .then(
+              (result) => {
+                setRates(result.status.data.rates)
+                console.log(result.status.data.rates)
+              },
+              (error) => {
+                console.log({error});
+              }
+            );
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+
   }, []);
 
   useEffect(()=>{
-    changeCalculation1(value1);
-  }, []);
-
-  const selectCurrency1 = cur => {
-    setCurrencyOption1(cur);
+    setOptions2(currency.filter(o => o.id !== currencyOption1.id));
+    setOptions1(currency.filter(o => o.id !== currencyOption2.id));
+    if(rates){
     changeCalculation1(value1);
   }
+  }, [rates, currencyOption1, currencyOption2]);
 
-  const selectCurrency2 = cur => {
-    setCurrencyOption2(cur);
-    changeCalculation2(value2);
-
-  };
 
   const changeCalculation1 = value => {
-    if(currencyOption1 === currencyOption2){
-      setValue2(value);
-      setValue1(value);
+    if(currencyOption1.name === 'CHF'){
+      const index = rates.findIndex(obj => obj.curr_code === currencyOption2.name);
+      setValue2(rates[index].taux_VA*value)
     } else {
-      setValue2(value*2);
-      setValue1(value);
+      if(currencyOption2.name === 'CHF'){
+        const index = rates.findIndex(obj => obj.curr_code === currencyOption1.name);
+        setValue2(rates[index].taux_AA*value)
+      } else {
+      const INDEXa = rates.findIndex(obj => obj.curr_code === currencyOption2.name);
+      const indexV = rates.findIndex(obj => obj.curr_code === currencyOption1.name);
+      setValue2(rates[INDEXa].taux_AC*value*rates[indexV].taux_VA)
+    }
     }
   }
 
@@ -88,11 +132,13 @@ export default function ChangeCardEn() {
   const swapFC = () => {
     const temp1 = currencyOption2;
     const temp2 = currencyOption1;
+    console.log(temp1)
+    console.log(temp2)
+
     setCurrencyOption1(temp1);
     setCurrencyOption2(temp2);
     setValue1(value2);
     setValue2(value1);
-
   }
 
     return (
@@ -101,10 +147,10 @@ export default function ChangeCardEn() {
           <h2 class="font-bold text-left pb-12 md:text-l text-xl text-blue-700 pt-4">Convert {currencyOption1.name} to {currencyOption2.name}</h2>
           <div class="flex sm:items-end justify-center sm:flex-row flex-col ">
             <div className="sm:w-1/4 sm:pb-0 pb-4 focus:border-blue-700">
-              <MoneyInput onChange={e => changeCalculation1(e.target.value)} value={value1}></MoneyInput>
+              <MoneyInput disabled={false} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
             </div>
             <div className="sm:pl-8 sm:pb-0 hover:drop-shadow-xl pb-12">
-              <CurrencySelector selectCurrency={selectCurrency1} swap={currencyOption1}></CurrencySelector>
+              <CurrencySelector selectCurrency={setCurrencyOption1} swap={currencyOption1} options={options1} ></CurrencySelector>
             </div>
             <button onClick={swapFC} className="inline-flex hover:drop-shadow-xl items-center self-center justify-center w-10 h-10 mx-2 text-pink-100 transition-colors duration-150 bg-blue-600 rounded-full focus:shadow-outline hover:bg-blue-800">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -113,10 +159,10 @@ export default function ChangeCardEn() {
 
             </button>
             <div className="sm:pr-8 hover:drop-shadow-xl sm:pt-0 pt-4">
-              <CurrencySelector selectCurrency={selectCurrency2} swap={currencyOption2}></CurrencySelector>
+              <CurrencySelector selectCurrency={setCurrencyOption2} swap={currencyOption2} options={options2}></CurrencySelector>
             </div>
             <div className="sm:w-1/4 sm:pt-0 pt-4">
-              <MoneyInput value={value2} onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
+              <MoneyInput value={value2} disabled onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
             </div>
           </div>
       </div>

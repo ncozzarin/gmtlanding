@@ -39,7 +39,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function CurrencySelector({selectCurrency , swap}) {
+export default function CurrencySelector({selectCurrency , swap, options}) {
   const [selected, setSelected] = useState(currency[2])
 
   useEffect(() => {
@@ -47,6 +47,7 @@ export default function CurrencySelector({selectCurrency , swap}) {
       setSelected(swap);
     }
   },[swap])
+  
   const setterFunction = val => {
     selectCurrency(val);
     setSelected(val);
@@ -74,25 +75,25 @@ export default function CurrencySelector({selectCurrency , swap}) {
               leaveTo="opacity-0"
             >
               <Listbox.Options className="absolute  z-10 mt-1 max-h-56 w-36 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                {currency.map((person) => (
+                {options.map((option) => (
                   <Listbox.Option
-                    key={person.id}
+                    key={option.id}
                     className={({ active }) =>
                       classNames(
                         active ? 'text-white bg-blue-700' : 'text-neutral-500',
                         'relative cursor-pointer select-none py-2 pl-3 pr-9'
                       )
                     }
-                    value={person}
+                    value={option}
                   >
                     {({ selected, active }) => (
                       <>
                         <div className="flex items-center">
-                          <img src={person.avatar} alt="" className="h-6 w-6 flex-shrink-0 rounded-full" />
+                          <img src={option.avatar} alt="" className="h-6 w-6 flex-shrink-0 rounded-full" />
                           <span
                             className={classNames(selected ? 'font-semibold' : 'font-normal', 'ml-3 block truncate')}
                           >
-                            {person.name}
+                            {option.name}
                           </span>
                         </div>
 

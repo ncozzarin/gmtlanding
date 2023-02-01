@@ -1,5 +1,7 @@
 
-export default function MoneyInput({value,onChange}) {
+export default function MoneyInput({value,onChange,disabled}) {
+
+
     return (
       <div>
         <div className="relative mt-1 rounded-md shadow-sm">
@@ -7,12 +9,14 @@ export default function MoneyInput({value,onChange}) {
             <span className="text-neutral-500 sm:text-sm">$</span>
           </div>
           <input
-            type="text"
+            type="number"
             name="price"
             id="price"
-            className="block w-full rounded-md border-neutral-500 pl-7 h-[43px] pr-12 focus:ring-blue-700 focus:outline-none focus:ring-2 focus:border-blue-700 sm:text-sm"
+            className="block w-full rounded-md border-neutral-500 disabled:bg-white pl-7 h-[43px] pr-12 focus:ring-blue-700 focus:outline-none focus:ring-2 focus:border-blue-700 sm:text-sm"
             placeholder="0.00"
-            value={value}
+            pattern="^\d+(?:\.\d{1,2})?$"
+            value={value % 1 === 0 ? value : parseFloat(value).toFixed(4)}
+            disabled={disabled}
             onChange={onChange}
           >
           
