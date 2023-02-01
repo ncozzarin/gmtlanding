@@ -40,7 +40,7 @@ export default function ChangeCardEn() {
   // const getData = async () => await fetchData();
   const [currencyOption1, setCurrencyOption1] = useState(currency[1]);
   const [currencyOption2, setCurrencyOption2] = useState(currency[2]);
-  const [value1, setValue1] = useState(2);
+  const [value1, setValue1] = useState(1);
   const [value2, setValue2] = useState(0);
 
    // currencies options for both selectors
