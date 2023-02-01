@@ -51,7 +51,7 @@ export default function NavBarEn({ fixed }) {
                   className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
                   href="#transfer"
                 >
-                  <span className="">TRANSFER</span>
+                  <span className="">MONEY TRANSFER</span>
                 </a>
             </li>
             <li className="nav-item">

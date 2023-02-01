@@ -14,13 +14,13 @@ export default function Maps() {
             <a className="hover:drop-shadow-xl" href="https://goo.gl/maps/dRh1ze8od6NdbY637">
                 <img src={rousseauMap} alt="" />
             </a>
-            <h2 className="font-bold text-center pt-12 md:text-l text-xl text-blue-700 pt-4">ROUSSEAU</h2>
+            <h2 className="font-bold text-center pt-12 md:text-l text-xl text-blue-700 pt-4">RUE ROUSSEAU 30</h2>
             </div>
             <div>
         <a className="hover:drop-shadow-xl" href="https://goo.gl/maps/47Z45ywsp5zysSoe6" >
             <img src={riveMap} alt="" />
         </a>
-        <h2 className="font-bold text-center pt-12 md:text-l text-xl text-blue-700 pt-4">RIVE</h2>
+        <h2 className="font-bold text-center pt-12 md:text-l text-xl text-blue-700 pt-4">COURS DE RIVE 4</h2>
 
         </div>
         </div>

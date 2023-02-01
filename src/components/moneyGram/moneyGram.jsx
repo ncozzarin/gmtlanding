@@ -17,7 +17,7 @@ export default function MoneyGram() {
         <p className="font-light text-center md:text-2xl text-xl pt-8 text-neutral-500 px-36">Avec autant d’options pour transférer de l’argent à l’international - par le biais de comptes bancaires, portefeuilles mobiles, à des milliers d’endroits et en ligne - MoneyGram vous permet de trouver votre chemin.</p>
         <div className="flex w-full drop-shadow-xl justify-center space-x-16 mt-8">
             <div className="w-1/2 font-bold text-left bg-red-500 px-12 py-8 rounded-r-xl rounded-tr-xl drop-shadow-xl w-full rounded-b-xl ">
-                <h2 className="font-bold text-left md:text-xl pt-2 text-white ">SERVICE ACCESIBLE</h2>
+                <h2 className="font-bold text-left md:text-xl pt-2 text-white ">SERVICE ACCESSIBLE</h2>
                 <p className="pt-8 font-normal text-white text-xl">"Le service est très "user friendly" à configurer. De plus, il est sécurisé et facile à utiliser à l’avenir. Les frais sont justes, et ils donnent un meilleur taux de change que la plupart. De loin, c’est le meilleur service de transfert d’argent que j’ai jamais utilisé!"</p>
             </div>
             <div className="w-1/2 font-bold text-left bg-red-500 px-12 py-8 rounded-r-xl rounded-tr-xl drop-shadow-xl w-full rounded-b-xl">

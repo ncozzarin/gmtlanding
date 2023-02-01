@@ -13,7 +13,6 @@ const Cards = () => {
   };
 
   const pauseSlider = () => {
-    console.log("mouse entered");
     clearInterval(slideInterval);
   };
 
