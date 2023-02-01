@@ -106,7 +106,12 @@ export default function ChangeCardEn() {
   const changeCalculation1 = value => {
     if(currencyOption1.name === 'CHF'){
       const index = rates.findIndex(obj => obj.curr_code === currencyOption2.name);
-      setValue2(value/rates[index].taux_VA)
+      if(value >= 1000 && currencyOption2.name === 'EUR'){
+        console.log("Taux pref.")
+        setValue2(value/rates[index].taux_VC)
+      } else {
+        setValue2(value/rates[index].taux_VA)
+      }
     } else {
       if(currencyOption2.name === 'CHF'){
         const index = rates.findIndex(obj => obj.curr_code === currencyOption1.name);
