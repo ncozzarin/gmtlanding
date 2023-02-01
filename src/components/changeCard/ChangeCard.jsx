@@ -106,7 +106,7 @@ export default function ChangeCardEn() {
   const changeCalculation1 = value => {
     if(currencyOption1.name === 'CHF'){
       const index = rates.findIndex(obj => obj.curr_code === currencyOption2.name);
-      setValue2(rates[index].taux_VA*value)
+      setValue2(value/rates[index].taux_VA)
     } else {
       if(currencyOption2.name === 'CHF'){
         const index = rates.findIndex(obj => obj.curr_code === currencyOption1.name);
@@ -114,7 +114,7 @@ export default function ChangeCardEn() {
       } else {
       const INDEXa = rates.findIndex(obj => obj.curr_code === currencyOption2.name);
       const indexV = rates.findIndex(obj => obj.curr_code === currencyOption1.name);
-      setValue2(rates[INDEXa].taux_AC*value*rates[indexV].taux_VA)
+      setValue2((rates[INDEXa].taux_AC*value)/rates[indexV].taux_VA)
     }
     }
   }
@@ -132,9 +132,6 @@ export default function ChangeCardEn() {
   const swapFC = () => {
     const temp1 = currencyOption2;
     const temp2 = currencyOption1;
-    console.log(temp1)
-    console.log(temp2)
-
     setCurrencyOption1(temp1);
     setCurrencyOption2(temp2);
     setValue1(value2);
