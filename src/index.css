@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .fade-anim img {
-    animation: fadeAnim 0.5s ease-out;
+    animation: fadeIn 1s ease-in;
   }
-  @keyframes fadeAnim {
+  @keyframes fadeIn {
     from {
       opacity: 0;
     }
