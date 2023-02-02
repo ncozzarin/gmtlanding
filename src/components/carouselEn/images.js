@@ -3,7 +3,15 @@ import ContentFrontaliers from '../../assets/carousel-content-frontalier-en.svg'
 import ContentTourist from '../../assets/carousel-content-tourists-en.svg';
 
 export default [
-    ContentMetaux,
-    ContentFrontaliers,
-    ContentTourist
+    {
+    content: ContentMetaux,
+    EnTitle: "PRECIOUS METALS",
+    EnSubtitle:"BEST PRICES",
+    FrTitle: "METAUX PRECIEUX",
+    FrSubtitle:"MEILLEURS PRIX",
+    }
+
 ];
+
+//    ContentFrontaliers,
+// ContentTourist

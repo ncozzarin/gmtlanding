@@ -52,7 +52,11 @@ return (
     <div className="drop-shadow-xl  mx-auto">
       <div className="w-full h-1/2 relative select-none" ref={slideRef}>
         <div className=" mx-auto object-fill ">
-          <img src={featuredImages[currentIndex]} alt="" className='w-full	' />
+          {/* <img src={featuredImages[currentIndex].content} alt="" className='w-full	' /> */}
+          <div className="relative ">
+            <img src={featuredImages[currentIndex].content} className=" w-full object-cover" />
+            <h1 className="absolute text-white text-3xl bottom-1/2 left-1/3 m-8">Hello World</h1>
+          </div>
           <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start px-3">
           <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full bg-opacity-50 opacity-25 hover:opacity-100 cursor-pointer hover:hover:text-white transition">
             <AiOutlineLeft size={50} />
