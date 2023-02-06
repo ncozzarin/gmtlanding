@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="absolute bottom-8 top-8 left-16">
             <a href="#company">
                 <img
-                    className=" w-32 "
+                    className=" w-32 h-24 "
                     src={gmtLogo}
                     alt="gmt logo"
                 >

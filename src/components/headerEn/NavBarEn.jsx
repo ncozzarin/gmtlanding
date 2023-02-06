@@ -14,7 +14,7 @@ export default function NavBarEn({ fixed }) {
           <div>
           <a href="#company">
             <img
-              className=" w-32 leading-relaxed inline-block whitespace-nowrap uppercase"
+              className="  w-32 h-24 leading-relaxed inline-block whitespace-nowrap uppercase"
               src={gmtLogo}
               alt="Money gram logo"
             >
@@ -23,6 +23,7 @@ export default function NavBarEn({ fixed }) {
             <button
               className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
+              aria-labelledby="more options"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
               <i className="fas fa-bars"></i>

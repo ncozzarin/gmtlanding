@@ -15,7 +15,7 @@ export default function Navbar({ fixed }) {
           <div >
           <a href="#company">
             <img
-              className=" w-32 leading-relaxed inline-block whitespace-nowrap uppercase"
+              className="  w-32 h-24 leading-relaxed inline-block whitespace-nowrap uppercase"
               alt="Logo gmt"
               src={gmtLogo}
             >
@@ -24,6 +24,7 @@ export default function Navbar({ fixed }) {
             <button
               className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
+              aria-labelledby="More options"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
               <i className="fas fa-bars"></i>

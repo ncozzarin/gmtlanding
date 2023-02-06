@@ -53,7 +53,7 @@ return (
       <div className="w-full h-1/2 relative select-none" ref={slideRef}>
         <div className=" mx-auto object-fill ">
           <div className="relative r ">
-            <img src={featuredImages[currentIndex].content} alt={featuredImages[currentIndex].alt} className=" w-full ounded-r-xl rounded-tr-xl drop-shadow-xl w-full rounded-b-xl object-cover" />
+            <img src={featuredImages[currentIndex].content} alt={featuredImages[currentIndex].alt} className=" w-full rounded-r-xl rounded-tr-xl drop-shadow-xl w-full rounded-b-xl object-cover" />
             <div className="absolute bottom-[50%] left-[20%]">
             <h2 className="text-white text-6xl text  font-bold  ">{featuredImages[currentIndex].Title}</h2>
             <h3 className="text-white text-6xl ">{featuredImages[currentIndex].Subtitle}</h3>

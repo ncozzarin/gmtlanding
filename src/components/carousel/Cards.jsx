@@ -51,10 +51,10 @@ const Cards = () => {
 return (
   <div>
     <div className="drop-shadow-xl  mx-auto">
-      <div className="w-full h-1/2 relative select-none bg-red-500" ref={slideRef}>
+      <div className="w-full h-1/2 relative select-none " ref={slideRef}>
         <div className=" mx-auto object-fill " ref={slideRef}>
         <div className="relative cursor-pointer ">
-            <img src={featuredImages[currentIndex].content} alt={featuredImages[currentIndex].alt} className=" w-full object-cover" />
+            <img src={featuredImages[currentIndex].content} alt={featuredImages[currentIndex].alt} className=" w-full rounded-r-xl rounded-tr-xl drop-shadow-xl w-full rounded-b-xl object-cover" />
             <div className="absolute bottom-[50%] left-[15%]">
             <h2 className="text-white text-6xl text  font-bold  ">{featuredImages[currentIndex].Title}</h2>
             <h3 className="text-white text-6xl ">{featuredImages[currentIndex].Subtitle}</h3>
