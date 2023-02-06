@@ -1,6 +1,6 @@
 import CardsEn from '../components/carouselEn/CardsEn';
 import MapsEn from '../components/mapsEn/MapsEn';
-import GoldBanner from '../assets/gold-banner.svg';
+import GoldBanner from '../assets/gold-banner.webp';
 import CurrencyConverterEn from '../components/currencyConverterEn/currencyConverterEn';
 import MoneyGramEn from '../components/moneyGramEn/moneyGramEn';
 import FooterEn from '../components/footerEn/FooterEn';
