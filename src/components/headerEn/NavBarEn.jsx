@@ -71,11 +71,6 @@ export default function NavBarEn({ fixed }) {
           <Link to="/fr">
             <h3 className="  hover:font-bold ">FR</h3>
             </Link>
-          <a href="">
-            <div className="  hover:text-black ">
-            <AiOutlineUser className="  hover:color-black " size={30} />
-            </div>
-          </a>
           </div>
         </div>
       </nav>
