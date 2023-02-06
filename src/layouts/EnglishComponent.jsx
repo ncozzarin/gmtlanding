@@ -1,6 +1,6 @@
 import CardsEn from '../components/carouselEn/CardsEn';
 import MapsEn from '../components/mapsEn/MapsEn';
-import GoldBanner from '../assets/gold-banner-en.svg';
+import GoldBanner from '../assets/gold-banner.svg';
 import CurrencyConverterEn from '../components/currencyConverterEn/currencyConverterEn';
 import MoneyGramEn from '../components/moneyGramEn/moneyGramEn';
 import FooterEn from '../components/footerEn/FooterEn';
@@ -53,8 +53,13 @@ function EnglishComponent() {
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
       </div>
       <div id="gold" className='pt-48 pb-20 '>
-        <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' src={GoldBanner}></img>
+        
       </div>
+      <div className="relative">
+      <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' alt="gold background with text" src={GoldBanner}></img>
+            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] text-6xl text font-bold  ">BEST PRICES FOR PRECIOUS METALS</h2>
+            <h3 className="text-white text-center absolute text-3xl bottom-[30%] left-[50%] translate-x-[-50%] ">Sale and purchase of precious metals mainly supplier of gold, we also buzy and/or sell other precious metals</h3>
+        </div>
       <div id="transfer" className='h-screen'>
       <MoneyGramEn></MoneyGramEn>
       </div>

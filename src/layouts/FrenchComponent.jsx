@@ -2,7 +2,7 @@ import Cards from '../components/carousel/Cards';
 import CurrencyConverter from '../components/currencyConverter/CurrencyConverter';
 import Navbar from '../components/header/NavBar';
 import Maps from '../components/maps/Maps';
-import GoldBanner from '../assets/gold-banner-fr.svg';
+import GoldBanner from '../assets/gold-banner.svg';
 import MoneyGram from '../components/moneyGram/moneyGram';
 import Footer from '../components/footer/Footer';
 import { useEffect, useState } from 'react';
@@ -51,9 +51,11 @@ function FrenchComponent() {
           </div>
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 w-3/6" />
       </div>
-      <div className='pt-48 pb-20 ' id="gold">
-        <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' src={GoldBanner}></img>
-      </div>
+      <div className="relative">
+      <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' alt="or avec un text" src={GoldBanner}></img>
+            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] text-6xl text font-bold  uppercase">Meilleurs prix POUR LES métaux précieux</h2>
+            <h3 className="text-white text-center absolute text-3xl bottom-[30%] left-[50%] translate-x-[-50%] ">Vente et achat de métaux précieux fournisseur principalement d’or, nous achetons et/ou vendons aussi d’autres métaux précieux.</h3>
+        </div>
       <div className='h-screen' id="transfert">
         <MoneyGram></MoneyGram>
       </div>

@@ -9,7 +9,7 @@ export default function MoneyGram() {
 
         <div className="flex drop-shadow-xl justify-center mt-8">
             <a href="https://goo.gl/maps/dRh1ze8od6NdbY637">
-                <img src={MGLogo} alt="" />
+                <img src={MGLogo} alt="logo moneygram" />
             </a>
         </div>
         <h2 className="font-bold text-center md:text-4xl text-xl pt-16 text-red-500 ">MOYENS D'ENVOYER ET DE RECEVOIR DE L'ARGENT</h2>
