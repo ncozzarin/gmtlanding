@@ -55,7 +55,7 @@ return (
         <div className=" mx-auto object-fill " ref={slideRef}>
         <div className="relative cursor-pointer ">
             <img src={featuredImages[currentIndex].content} alt={featuredImages[currentIndex].alt} className=" w-full object-cover" />
-            <div className="absolute bottom-[50%] left-[20%]">
+            <div className="absolute bottom-[50%] left-[15%]">
             <h2 className="text-white text-6xl text  font-bold  ">{featuredImages[currentIndex].Title}</h2>
             <h3 className="text-white text-6xl ">{featuredImages[currentIndex].Subtitle}</h3>
             </div>
