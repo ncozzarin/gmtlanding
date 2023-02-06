@@ -57,7 +57,7 @@ export default function CurrencySelector({selectCurrency , swap, options}) {
       {({ open }) => (
         <>
           <div className="h-min align-bottom">
-            <Listbox.Button className="relative w-36 cursor-pointer rounded-md border border-neutral-500 bg-white py-2 pl-3 pr-12 text-left shadow-sm focus:border-blue-700 focus:outline-none sm:text-sm">
+            <Listbox.Button aria-labelledby="list des monnais" className="relative w-36 cursor-pointer rounded-md border border-neutral-500 bg-white py-2 pl-3 pr-12 text-left shadow-sm focus:border-blue-700 focus:outline-none sm:text-sm">
               <span className="flex items-center">
                 <img src={selected.avatar} alt="" className="h-6 w-6 flex-shrink-0 rounded-full" />
                 <span className="ml-3 block truncate">{selected.name}</span>

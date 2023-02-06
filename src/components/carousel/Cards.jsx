@@ -61,10 +61,10 @@ return (
             </div>
           </div>
           <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start px-3">
-          <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full bg-opacity-50 opacity-25 hover:opacity-100 cursor-pointer hover:hover:text-white transition">
+          <button onClick={handleOnPrevClick} aria-labelledby="avant image" className=" text-white p-1 rounded-full bg-opacity-50 opacity-25 hover:opacity-100 cursor-pointer hover:hover:text-white transition">
             <AiOutlineLeft size={50} />
           </button>
-          <button onClick={handleOnPrevClick} className=" text-white p-1 rounded-full opacity-25 bg-opacity-50 cursor-pointer hover:opacity-100 transition">
+          <button onClick={handleOnPrevClick} aria-labelledby="prochaine image" className=" text-white p-1 rounded-full opacity-25 bg-opacity-50 cursor-pointer hover:opacity-100 transition">
             <AiOutlineRight size={50} />
           </button>
         </div>
