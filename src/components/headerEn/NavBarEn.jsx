@@ -1,12 +1,11 @@
 import React from "react";
 import gmtLogo from '../../assets/gmt-logo.svg';
-import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 
 
 export default function NavBarEn({ fixed }) {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [isNavOpen, setIsNavOpen] = React.useState(false);
   return (
     <>
       <nav className="relative h-32 flex flex-wrap items-center justify-between px-2 py-3 mb-3 mr-2">
@@ -21,16 +20,17 @@ export default function NavBarEn({ fixed }) {
             </img>
             </a>
             <button
-              className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
               type="button"
               aria-labelledby="more options"
-              onClick={() => setNavbarOpen(!navbarOpen)}
+              onClick={() => setIsNavOpen(!isNavOpen)}
             >
-              <i className="fas fa-bars"></i>
+              <i className="fas fa-bars">a</i>
             </button>
           </div>
-          <div>
-          <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+          <div >
+          <ul className="lg:flex hidden flex-col lg:flex-row list-none lg:ml-auto">
+          
             <li className="nav-item">
                 <a
                   className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
@@ -63,7 +63,48 @@ export default function NavBarEn({ fixed }) {
                   <span className="">COMPANY</span>
                 </a>
             </li>
+          </ul>
+          <section className="MOBILE-MENU flex lg:hidden">
+          <div
+            className="HAMBURGER-ICON space-y-2"
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+          </div>
+
+          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+            <div
+              className="absolute top-0 right-0 px-8 py-8"
+              onClick={() => setIsNavOpen(false)}
+            >
+              <svg
+                className="h-8 w-8 text-gray-600"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </div>
+            <ul className="flex flex-col items-center justify-between min-h-[250px]">
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <a href="/about">About</a>
+              </li>
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <a href="/portfolio">Portfolio</a>
+              </li>
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <a href="/contact">Contact</a>
+              </li>
             </ul>
+          </div>
+        </section>
           </div>
           <div className=" text-neutral-500  space-x-3.5 flex" >
           <Link to="/en">
@@ -74,7 +115,27 @@ export default function NavBarEn({ fixed }) {
             </Link>
           </div>
         </div>
+        
       </nav>
+      <style>{`
+      .hideMenuNav {
+        display: none;
+      }
+      .showMenuNav {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: white;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    `}</style>
     </>
   );
 }

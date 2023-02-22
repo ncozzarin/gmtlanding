@@ -54,12 +54,12 @@ return (
         <div className=" mx-auto object-fill ">
           <div className="relative r ">
             <img src={featuredImages[currentIndex].content} alt={featuredImages[currentIndex].alt} className=" w-full rounded-r-xl rounded-tr-xl drop-shadow-xl w-full rounded-b-xl object-cover" />
-            <div className="absolute bottom-[50%] left-[20%]">
-            <h2 className="text-white text-6xl text  font-bold  ">{featuredImages[currentIndex].Title}</h2>
-            <h3 className="text-white text-6xl ">{featuredImages[currentIndex].Subtitle}</h3>
+            <div className="absolute lg:bottom-[50%] bottom-[30%] left-[20%]">
+            <h2 className="text-white lg:text-6xl text-base  font-bold  ">{featuredImages[currentIndex].Title}</h2>
+            <h3 className="text-white  lg:text-6xl text-base ">{featuredImages[currentIndex].Subtitle}</h3>
             </div>
           </div>
-          <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start px-3">
+          <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start lg:px-3">
           <button onClick={handleOnPrevClick} aria-label="previous image" className=" text-white p-1 rounded-full bg-opacity-50 opacity-25 hover:opacity-100 cursor-pointer hover:hover:text-white transition">
             <AiOutlineLeft size={50} />
           </button>
