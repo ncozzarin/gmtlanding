@@ -57,12 +57,12 @@ export default function CurrencySelector({selectCurrency , swap, options}) {
       {({ open }) => (
         <>
           <div className="h-min align-bottom">
-            <Listbox.Button aria-labelledby="list des monnais" className="relative w-36 cursor-pointer rounded-md border border-neutral-500 bg-white py-2 pl-3 pr-12 text-left shadow-sm focus:border-blue-700 focus:outline-none sm:text-sm">
+            <Listbox.Button aria-labelledby="list des monnais" className="relative sm:w-36 w-26 cursor-pointer rounded-md border border-neutral-500 bg-white sm:py-2 py-3 pl-3 pr-12 text-left shadow-sm focus:border-blue-700 focus:outline-none sm:text-sm">
               <span className="flex items-center">
-                <img src={selected.avatar} alt="" className="h-6 w-6 flex-shrink-0 rounded-full" />
-                <span className="ml-3 block truncate">{selected.name}</span>
+                <img src={selected.avatar} alt="" className="h-6 w-6 sm:flex-shrink-0 rounded-full" />
+                <span className="sm:ml-3 ml-2 block sm:truncate">{selected.name}</span>
               </span>
-              <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
+              <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center sm:pr-2 pr-1">
                 <ChevronUpDownIcon className="h-5 w-5 text-neutral-500" aria-hidden="true" />
               </span>
             </Listbox.Button>

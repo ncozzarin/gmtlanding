@@ -64,14 +64,23 @@ export default function NavBarEn({ fixed }) {
                 </a>
             </li>
           </ul>
-          <section className="MOBILE-MENU flex lg:hidden">
+          </div>
+          <div className=" text-neutral-500  space-x-3.5 flex" >
+          <Link to="/en">
+            <h3 className="  font-bold ">EN</h3>
+          </Link>
+          <Link to="/fr">
+            <h3 className="  hover:font-bold ">FR</h3>
+            </Link>
+          </div>
+          <section className=" flex lg:hidden">
           <div
-            className="HAMBURGER-ICON space-y-2"
+            className=" space-y-2"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-neutral-500"></span>
+            <span className="block h-0.5 w-8 animate-pulse  bg-neutral-500"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-neutral-500"></span>
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
@@ -80,7 +89,7 @@ export default function NavBarEn({ fixed }) {
               onClick={() => setIsNavOpen(false)}
             >
               <svg
-                className="h-8 w-8 text-gray-600"
+                className="h-8 w-8 border-neutral-500"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -93,28 +102,43 @@ export default function NavBarEn({ fixed }) {
               </svg>
             </div>
             <ul className="flex flex-col items-center justify-between min-h-[250px]">
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/about">About</a>
-              </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/portfolio">Portfolio</a>
-              </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/contact">Contact</a>
-              </li>
+            <li className="nav-item">
+                <a
+                  className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
+                  href="#change"
+                >
+                  <span className="">EXCHANGE</span>
+                </a>
+            </li>
+            <li className="nav-item">
+                <a
+                  className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
+                  href="#gold"
+                >
+                  <span className="">GOLD</span>
+                </a>
+            </li>
+            <li className="nav-item">
+                <a
+                  className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500 "
+                  href="#transfer"
+                >
+                  <span className="">MONEY TRANSFER</span>
+                </a>
+            </li>
+            <li className="nav-item">
+                <a
+                  className="px-3 py-2 flex font-sans items-center text-s hover:underline decoration-yellow-500 font-semibold decoration-2 hover:border-spacing-4  underline-offset-8 uppercase hover:font-bold  hover:text-blue-700 leading-snug text-neutral-500  "
+                  href="#company"
+                >
+                  <span className="">COMPANY</span>
+                </a>
+            </li>
             </ul>
           </div>
         </section>
-          </div>
-          <div className=" text-neutral-500  space-x-3.5 flex" >
-          <Link to="/en">
-            <h3 className="  font-bold ">EN</h3>
-          </Link>
-          <Link to="/fr">
-            <h3 className="  hover:font-bold ">FR</h3>
-            </Link>
-          </div>
         </div>
+        
         
       </nav>
       <style>{`

@@ -146,32 +146,49 @@ export default function ChangeCardEn() {
   }
 
     return (
-      <><div className="bg-neutral-100 lg:pt-8 pt-4 pb-20 lg:pr-20pr-4 lg:pl-20 pl-4 rounded-r-xl rounded-tr-xl w-full shadow-lg  text-left	 rounded-b-xl">
+      <><div className="bg-neutral-100 lg:pt-8 pt-4 sm:pb-20 pb-8 sm:pr-20 pr-4 lg:pl-20 pl-4 rounded-r-xl rounded-tr-xl w-full shadow-lg  text-left	 rounded-b-xl">
 
           <h2 class="font-bold text-left  pb-12 lg:text-xl text-xl text-blue-700 pt-4">Convert {currencyOption1.name} to {currencyOption2.name}</h2>
-          <div class="flex sm:items-end justify-center lg:flex-row flex-column ">
-
-            <div className="sm:w-1/4 sm:pb-0 pb-4 focus:border-blue-700">
-              <MoneyInput disabled={false} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
-            </div>
-            <div className="sm:pl-8 sm:pb-0 hover:drop-shadow-xl pb-12">
-              <CurrencySelector selectCurrency={setCurrencyOption1} swap={currencyOption1} options={options1} ></CurrencySelector>
-            </div>
+          <div class="sm:flex  sm:items-end justify-center sm:flex-row hidden ">
+            
+              <div className="sm:w-1/4 sm:pb-0 pb-4 focus:border-blue-700">
+                <MoneyInput disabled={false} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
+              </div>
+              <div className="sm:pl-8 sm:pb-0 hover:drop-shadow-xl pb-12">
+                <CurrencySelector selectCurrency={setCurrencyOption1} swap={currencyOption1} options={options1} ></CurrencySelector>
+              </div>
 
             <button onClick={swapFC} aria-labelledby="change currency" className="lg:inline-flex hover:drop-shadow-xl hidden display items-center self-center justify-center w-10 h-10 mx-2 text-pink-100 transition-colors duration-150 bg-blue-600 rounded-full focus:shadow-outline hover:bg-blue-800">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
               </svg>
             </button>
-
             <div className="sm:pr-8 hover:drop-shadow-xl sm:pt-0 pt-4">
               <CurrencySelector selectCurrency={setCurrencyOption2} swap={currencyOption2} options={options2}></CurrencySelector>
             </div>
             <div className="sm:w-1/4 sm:pt-0 pt-4">
               <MoneyInput value={value2} disabled onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
             </div>
-
           </div>
+
+          <div className="sm:hidden flex-col space-y-6">
+            <div className="flex space-x-4 flex">
+            <div className="  ">
+                <CurrencySelector selectCurrency={setCurrencyOption1} swap={currencyOption1} options={options1} ></CurrencySelector>
+              </div>
+              <div className=" focus:border-blue-700">
+                <MoneyInput disabled={false} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
+              </div>
+            </div>
+            <div className="flex space-x-4">
+            <div className="  ">
+              <CurrencySelector selectCurrency={setCurrencyOption2} swap={currencyOption2} options={options2}></CurrencySelector>
+            </div>
+            <div className="sm:w-1/4 ">
+              <MoneyInput value={value2} disabled onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
+            </div>
+            </div>
+            </div>
       </div>
       </>
 
