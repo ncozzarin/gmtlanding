@@ -64,8 +64,6 @@ function EnglishComponent() {
       <MoneyGramEn></MoneyGramEn>
       </div>
       <FooterEn></FooterEn>
-    </div><div>
-        
       </div></>
   );
 }

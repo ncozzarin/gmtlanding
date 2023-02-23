@@ -61,10 +61,10 @@ function FrenchComponent() {
       <div className='lg:h-screen' id="transfert">
         <MoneyGram></MoneyGram>
       </div>
+      <Footer></Footer>
+    </div>
 
-    </div><div>
-    <Footer></Footer>
-      </div></>
+    </>
   );
 }
 
