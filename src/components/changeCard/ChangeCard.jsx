@@ -80,7 +80,7 @@ export default function ChangeCardEn() {
             .then(
               (result) => {
                 setRates(result.status.data.rates)
-                console.log(result.status.data.rates)
+
                 fetch('https://api-prod.ischange.li/v1/isscreen/logout', {
                   method: 'POST',
                   headers: {
@@ -88,17 +88,10 @@ export default function ChangeCardEn() {
                   },
                   body: JSON.stringify({})
                 })
-                .then(response => {
-                  // Handle the response here
-                  console.log('Response:', response);
-                })
-                .catch(error => {
-                  // Handle errors here
-                  console.error('Error:', error);
-                });
+                .then(response => {})
+                .catch(error => {});
               },
               (error) => {
-                console.log({error});
               }
             );
         },

@@ -80,7 +80,6 @@ export default function ChangeCardEn() {
             .then(
               (result) => {
                 setRates(result.status.data.rates)
-                console.log(result.status.data.rates)
               },
               (error) => {
                 console.log({error});
