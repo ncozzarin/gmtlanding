@@ -5,7 +5,7 @@ import gmtLogo from '../../assets/gmt-logo-n.svg';
 
 export default function Footer() {
   return (
-    <div className="flex w-full lg:pl-16 pl-4 lg:pr-32 py-8 h-36 bg-blue-700  rounded-tr-xl drop-shadow-xl w-full lg:mt-36 mt-12">
+    <div className="flex w-full lg:pl-16 pl-4 lg:pr-32 py-8 h-36 bg-blue-700 relative rounded-tr-xl drop-shadow-xl w-full lg:mt-36 mt-12">
         <div className="absolute bottom-8 lg:top-8 lg:left-16 left-8">
             <a href="#noid">
                 <img
