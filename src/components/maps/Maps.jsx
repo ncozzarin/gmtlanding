@@ -8,7 +8,7 @@ export default function Maps() {
   return (
     <div className="bg-neutral-100 lg:p-12 p-4 rounded-r-xl rounded-tr-xl drop-shadow-xl w-full rounded-b-xl">
         <h2 className="font-bold text-center lg:pt-12 pt-4 md:text-4xl text-xl text-blue-700 pt-1">NOS AGENCES</h2>
-        <hr class="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl"/>
+        <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl"/>
         <div className="lg:flex lg:flex-row flex-col justify-center lg:space-x-40 pt-8">
             <div>
             <a className="hover:drop-shadow-xl " aria-label="Map to rousseau agency" href="https://goo.gl/maps/dRh1ze8od6NdbY637">

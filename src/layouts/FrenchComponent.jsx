@@ -24,7 +24,7 @@ function FrenchComponent() {
       </div>
       <div id="company" className='lg:h-screen'>
       <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700">GMT CHANGE</h2>
-      <hr class="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
+      <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
       <h3 className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Change - Métaux précieux - Transfert de fonds</h3>
       <div className='pt-16'>
         <Maps></Maps>
@@ -33,23 +33,23 @@ function FrenchComponent() {
       <div className='pt-16 h-screen' id="change">
         <CurrencyConverter></CurrencyConverter>
         <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700">HORAIRES D'OUVERTURE</h2>
-          <hr class="border-2 mt-6 m-auto border-yellow-500 w-1/12 max-w-{20px} drop-shadow-xl" />
-          <hr class="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
-          <div class="grid grid-cols-2 lg:w-3/6 m-auto">
+          <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12 max-w-{20px} drop-shadow-xl" />
+          <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
+          <div className="grid grid-cols-2 lg:w-3/6 m-auto">
             <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'}  lg:px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6) ? 'bold' : 'light'} text-center lg:text-2xl text-base items-center leading-snug`}>Lundi - Vendredi</h3>
             <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6 ) ? 'bold' : 'light'} text-center text-2xl lg:text-2xl text-base items-center leading-snug`}>8am - 10pm</h3>
           </div>
-          <hr class="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
-          <div class="grid grid-cols-2 lg:w-3/6 m-auto">
+          <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
+          <div className="grid grid-cols-2 lg:w-3/6 m-auto">
             <h3  className={`text-${currentDay === 6  ? 'blue-700' : 'neutral-500'}  lg:px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'} text-center lg:text-2xl text-base items-center leading-snug`}>Samedi</h3>
             <h3  className={`text-${(currentDay  === 6 ) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug `}>8am - 10pm</h3>
           </div>
-          <hr class="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
-          <div class="grid grid-cols-2 lg:w-3/6 m-auto ">
+          <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
+          <div className="grid grid-cols-2 lg:w-3/6 m-auto ">
             <h3  className={`text-${currentDay === 0 ? 'red-500' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 0) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug`}>Dimanche</h3>
             <h3  className={`text-${(currentDay === 0) ? 'red-500' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 0) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug `}>Fermé</h3>
           </div>
-          <hr class="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
+          <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
       </div>
       <div id="gold" className='lg:pt-48 pt-32 lg:pb-20 pb-18'>
       <div className="relative ">
