@@ -45,17 +45,17 @@ function FrenchComponent() {
             <h3  className={`text-${(currentDay  === 6 ) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug `}>8am - 10pm</h3>
           </div>
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
-          <div class="grid grid-cols-2 w-3/6 m-auto ">
+          <div class="grid grid-cols-2 lg:w-3/6 m-auto ">
             <h3  className={`text-${currentDay === 0 ? 'red-500' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 0) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug`}>Dimanche</h3>
             <h3  className={`text-${(currentDay === 0) ? 'red-500' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 0) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug `}>Fermé</h3>
           </div>
           <hr class="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
       </div>
-      <div id="gold" className='lg:pt-48 pt-64 pb-20'>
+      <div id="gold" className='lg:pt-48 pt-32 lg:pb-20 pb-18'>
       <div className="relative ">
       <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' alt="or avec un text" src={GoldBanner}></img>
-            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] lg:text-6xl text-base lg:w-11/12 w-full text font-bold">Meilleurs prix POUR LES métaux précieux</h2>
-            <h3 className="text-white text-center absolute lg:text-3xl text-sm lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%]">Vente et achat de métaux précieux fournisseur principalement d’or, nous achetons et/ou vendons aussi d’autres métaux précieux.</h3>
+            <h2 className="text-white absolute bottom-[70%] lg:bottom-[60%] left-[50%] text-center translate-x-[-50%] lg:text-6xl text-sm lg:w-11/12 w-full text font-bold">Meilleurs prix pour les métaux précieux</h2>
+            <h3 className="text-white text-center absolute lg:text-3xl text-xs lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%]">Vente et achat de métaux précieux fournisseur principalement d’or, nous achetons et/ou vendons aussi d’autres métaux précieux.</h3>
         </div>
         </div>
       <div className='lg:h-screen' id="transfert">

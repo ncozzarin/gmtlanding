@@ -144,11 +144,11 @@ export default function ChangeCardEn() {
   }
 
     return (
-      <><div className="bg-neutral-100 lg:pt-8 pt-4 pb-20 lg:pr-20pr-4 lg:pl-20 pl-4 rounded-r-xl rounded-tr-xl w-full shadow-lg  text-left	 rounded-b-xl">
+      <><div className="bg-neutral-100 lg:pt-8 pt-4 sm:pb-20 pb-8 sm:pr-20 pr-4 lg:pl-20 pl-4 rounded-r-xl rounded-tr-xl w-full shadow-lg text-left  rounded-b-xl">
 
           <h2 class="font-bold text-left  pb-12 lg:text-xl text-xl text-blue-700 pt-4">Convertir {currencyOption1.name} a {currencyOption2.name}</h2>
-          <div class="flex sm:items-end justify-center sm:flex-row flex-col ">
-            <div className="flex sm:items-end justify-center lg:flex-row flex-column">
+          <div class="sm:flex  sm:items-end justify-center sm:flex-row hidden ">
+            <div className="sm:w-1/4 sm:pb-0 pb-4 focus:border-blue-700">
               <MoneyInput disabled={false} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
             </div>
             <div className="sm:pl-8 sm:pb-0 hover:drop-shadow-xl pb-12">
@@ -167,6 +167,24 @@ export default function ChangeCardEn() {
               <MoneyInput value={value2} disabled onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
             </div>
           </div>
+          <div className="sm:hidden flex-col space-y-6">
+            <div className="flex space-x-4 flex">
+            <div className="  ">
+                <CurrencySelector selectCurrency={setCurrencyOption1} swap={currencyOption1} options={options1} ></CurrencySelector>
+              </div>
+              <div className=" focus:border-blue-700">
+                <MoneyInput disabled={false} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
+              </div>
+            </div>
+            <div className="flex space-x-4">
+            <div className="  ">
+              <CurrencySelector selectCurrency={setCurrencyOption2} swap={currencyOption2} options={options2}></CurrencySelector>
+            </div>
+            <div className="sm:w-1/4 ">
+              <MoneyInput value={value2} disabled onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
+            </div>
+            </div>
+            </div>
       </div>
       </>
 
