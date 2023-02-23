@@ -67,7 +67,7 @@ export default function NavBarEn({ fixed }) {
           </div>
           <div className=" text-neutral-500  space-x-3.5 flex" >
           <Link to="/en">
-            <h3 className="  font-bold ">EN</h3>
+            <h3 className="  font-bold  ">EN</h3>
           </Link>
           <Link to="/fr">
             <h3 className="  hover:font-bold ">FR</h3>
