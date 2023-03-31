@@ -37,12 +37,12 @@ function FrenchComponent() {
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
           <div className="grid grid-cols-2 lg:w-3/6 m-auto">
             <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'}  lg:px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6) ? 'bold' : 'light'} text-center lg:text-2xl text-base items-center leading-snug`}>Lundi - Vendredi</h3>
-            <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6 ) ? 'bold' : 'light'} text-center text-2xl lg:text-2xl text-base items-center leading-snug`}>8am - 10pm</h3>
+            <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6 ) ? 'bold' : 'light'} text-center text-2xl lg:text-2xl text-base items-center leading-snug`}>8:30am - 19pm</h3>
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
           <div className="grid grid-cols-2 lg:w-3/6 m-auto">
             <h3  className={`text-${currentDay === 6  ? 'blue-700' : 'neutral-500'}  lg:px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'} text-center lg:text-2xl text-base items-center leading-snug`}>Samedi</h3>
-            <h3  className={`text-${(currentDay  === 6 ) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug `}>8am - 10pm</h3>
+            <h3  className={`text-${(currentDay  === 6 ) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug `}>8:30am - 18pm</h3>
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
           <div className="grid grid-cols-2 lg:w-3/6 m-auto ">
@@ -58,7 +58,7 @@ function FrenchComponent() {
             <h3 className="text-white text-center absolute lg:text-3xl text-xs lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%]">Vente et achat de métaux précieux fournisseur principalement d’or, nous achetons et/ou vendons aussi d’autres métaux précieux.</h3>
         </div>
         </div>
-      <div className='lg:h-screen' id="transfert">
+      <div className='lg:h-screen' id="transfer">
         <MoneyGram></MoneyGram>
       </div>
       <Footer></Footer>

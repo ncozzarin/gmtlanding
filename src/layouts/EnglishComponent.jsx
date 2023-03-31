@@ -38,12 +38,12 @@ function EnglishComponent() {
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
           <div className="grid grid-cols-2 lg:w-3/6 m-auto ">
             <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6) ? 'bold' : 'light'} text-center lg:text-2xl text-base items-center leading-snug`}>Monday - Friday</h3>
-            <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6 ) ? 'bold' : 'light'} text-center text-2xl lg:text-2xl text-base items-center leading-snug `}>8am - 10pm</h3>
+            <h3  className={`text-${(currentDay !== 0 && currentDay !== 6) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay !== 0 && currentDay !== 6 ) ? 'bold' : 'light'} text-center text-2xl lg:text-2xl text-base items-center leading-snug `}>8:30am - 19pm</h3>
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
           <div className="grid grid-cols-2 lg:w-3/6 m-auto ">
             <h3  className={`text-${currentDay === 6  ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'} text-center lg:text-2xl text-base items-center leading-snug`}>Saturday</h3>
-            <h3  className={`text-${(currentDay  === 6 ) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug `}>8am - 10pm</h3>
+            <h3  className={`text-${(currentDay  === 6 ) ? 'blue-700' : 'neutral-500'} lg:px-3 py-2 m-auto font-${(currentDay === 6) ? 'bold' : 'light'}  text-center lg:text-2xl text-base items-center leading-snug `}>8:30am - 18pm</h3>
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
           <div className="grid grid-cols-2 lg:w-3/6 m-auto ">
