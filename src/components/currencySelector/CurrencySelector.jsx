@@ -7,31 +7,37 @@ const currency  = [
     id: 1,
     name: 'USD',
     avatar:'https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg',
+    symbol:'$'
   },
   {
     id: 2,
     name: 'CHF',
     avatar:'https://cdn.britannica.com/43/4543-004-C0D5C6F4/Flag-Switzerland.jpg',
+    symbol: 'CHF',
   },
   {
     id: 3,
     name: 'EUR',
     avatar:'https://m.media-amazon.com/images/I/614JLqsvMoL._AC_SL1500_.jpg',
+    symbol: '€'
   },
   {
     id: 4,
     name: 'GBP',
     avatar:'https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg',
+    symbol: '£'
   },
   {
     id: 5,
     name: 'JPY',
     avatar:'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png',
+    symbol: '¥'
   },
   {
     id: 6,
     name: 'CAD',
     avatar:'https://www.worldatlas.com/img/flag/ca-flag.jpg',
+    symbol:'CAD'
   },
 ]
 

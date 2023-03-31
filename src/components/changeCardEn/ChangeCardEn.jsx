@@ -82,12 +82,10 @@ export default function ChangeCardEn() {
                 setRates(result.status.data.rates)
               },
               (error) => {
-                console.log({error});
               }
             );
         },
         (error) => {
-          console.log(error);
         }
       );
 

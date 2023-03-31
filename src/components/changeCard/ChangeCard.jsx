@@ -7,37 +7,42 @@ const currency  = [
     id: 1,
     name: 'USD',
     avatar:'https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg',
+    symbol:'$'
   },
   {
     id: 2,
     name: 'CHF',
     avatar:'https://cdn.britannica.com/43/4543-004-C0D5C6F4/Flag-Switzerland.jpg',
+    symbol: 'CHF',
   },
   {
     id: 3,
     name: 'EUR',
     avatar:'https://m.media-amazon.com/images/I/614JLqsvMoL._AC_SL1500_.jpg',
+    symbol: '€'
   },
   {
     id: 4,
     name: 'GBP',
     avatar:'https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg',
+    symbol: '£'
   },
   {
     id: 5,
     name: 'JPY',
     avatar:'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png',
+    symbol: '¥'
   },
   {
     id: 6,
     name: 'CAD',
     avatar:'https://www.worldatlas.com/img/flag/ca-flag.jpg',
+    symbol:'CAD'
   },
 ]
 
 export default function ChangeCardEn() {
 
-  // const getData = async () => await fetchData();
   const [currencyOption1, setCurrencyOption1] = useState(currency[1]);
   const [currencyOption2, setCurrencyOption2] = useState(currency[2]);
   const [value1, setValue1] = useState(1);
@@ -96,7 +101,6 @@ export default function ChangeCardEn() {
             );
         },
         (error) => {
-          console.log(error);
         }
       );
 
@@ -115,7 +119,6 @@ export default function ChangeCardEn() {
     if(currencyOption1.name === 'CHF'){
       const index = rates.findIndex(obj => obj.curr_code === currencyOption2.name);
       if(value >= 1000 && currencyOption2.name === 'EUR'){
-        console.log("Taux pref.")
         setValue2(value/rates[index].taux_VC)
       } else {
         setValue2(value/rates[index].taux_VA)
@@ -176,12 +179,12 @@ export default function ChangeCardEn() {
             </div>
           </div>
           <div className="sm:hidden flex-col space-y-6">
-            <div className="flex space-x-4 flex">
+            <div className="flex space-x-4">
             <div className="  ">
                 <CurrencySelector selectCurrency={setCurrencyOption1} swap={currencyOption1} options={options1} ></CurrencySelector>
               </div>
               <div className=" focus:border-blue-700">
-                <MoneyInput disabled={false} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
+                <MoneyInput disabled={false} currency={currencyOption1.symbol} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
               </div>
             </div>
             <div className="flex space-x-4">
@@ -189,7 +192,7 @@ export default function ChangeCardEn() {
               <CurrencySelector selectCurrency={setCurrencyOption2} swap={currencyOption2} options={options2}></CurrencySelector>
             </div>
             <div className="sm:w-1/4 ">
-              <MoneyInput value={value2} disabled onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
+              <MoneyInput value={value2} disabled currency={currencyOption2.symbol} onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
             </div>
             </div>
             </div>
