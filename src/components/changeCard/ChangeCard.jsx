@@ -160,7 +160,7 @@ export default function ChangeCardEn() {
           <h2 className="font-bold text-left  pb-12 lg:text-xl text-xl text-blue-700 pt-4">Convertir {currencyOption1.name} a {currencyOption2.name}</h2>
           <div className="sm:flex  sm:items-end justify-center sm:flex-row hidden ">
             <div className="sm:w-1/4 sm:pb-0 pb-4 focus:border-blue-700">
-              <MoneyInput disabled={false} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
+              <MoneyInput disabled={false} currency={currencyOption1.symbol} onChange={e => {setValue1(e.target.value); changeCalculation1(e.target.value)}} value={value1}></MoneyInput>
             </div>
             <div className="sm:pl-8 sm:pb-0 hover:drop-shadow-xl pb-12">
               <CurrencySelector selectCurrency={setCurrencyOption1} swap={currencyOption1} options={options1} ></CurrencySelector>
@@ -175,7 +175,7 @@ export default function ChangeCardEn() {
               <CurrencySelector selectCurrency={setCurrencyOption2} swap={currencyOption2} options={options2}></CurrencySelector>
             </div>
             <div className="sm:w-1/4 sm:pt-0 pt-4">
-              <MoneyInput value={value2} disabled onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
+              <MoneyInput value={value2} disabled currency={currencyOption2.symbol} onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
             </div>
           </div>
           <div className="sm:hidden flex-col space-y-6">
