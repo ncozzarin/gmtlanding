@@ -1,6 +1,6 @@
 import React from "react";
-import riveMap from '../../assets/rive-map.png';
-import rousseauMap from '../../assets/rousseau-map.png';
+import riveMap from '../../assets/rive-map.webp';
+import rousseauMap from '../../assets/rousseau-map.webp';
 
 export default function Maps() {
   return (
