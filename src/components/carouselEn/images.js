@@ -1,6 +1,6 @@
-import ContentMetaux from '../../assets/carousel-content-gold.jpg';
-import ContentFrontaliers from '../../assets/carousel-content-front.jpg';
-import ContentTourist from '../../assets/carousel-content-tourist.jpg';
+import ContentMetaux from '../../assets/carousel-content-gold.webp';
+import ContentFrontaliers from '../../assets/carousel-content-front.webp';
+import ContentTourist from '../../assets/carousel-content-tourist.webp';
 
 export default [
     {
