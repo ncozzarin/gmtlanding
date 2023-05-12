@@ -5,20 +5,20 @@ import ContentTourist from '../../assets/carousel-content-tourist.webp';
 export default [
     {
     content: ContentMetaux,
-    Title: "PRECIOUS METALS",
-    Subtitle:"BEST PRICES",
+    Title: "Best prices",
+    Subtitle:"for precious metals",
     alt:"image with gold lingots"
     },
     {
     content: ContentTourist,
-    Title: "THE BEST EXCHANGE RATES",
-    Subtitle:"DURING YOUR STAY IN GENEVA",
+    Title: "Benefit from the best exchange rates",
+    Subtitle:"during your stay in Geneva",
     alt:"image with geneva jet d'eau"
     },
     {
     content:  ContentFrontaliers,
-    Title: "ADVANTAGES",
-    Subtitle:"FOR CROSS BORDER WORKERS",
+    Title: "Advantageous rates for ",
+    Subtitle:" cross-border workers.",
     alt:"image with 1 euro and 1 chf"
     }
 ];

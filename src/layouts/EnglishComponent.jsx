@@ -57,8 +57,8 @@ function EnglishComponent() {
       </div>
       <div className="relative">
       <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' alt="gold background with text" src={GoldBanner}></img>
-            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] lg:text-6xl text-base lg:w-11/12 w-full text font-bold  ">BEST PRICES FOR PRECIOUS METALS</h2>
-            <h3 className="text-white text-center absolute lg:text-3xl text-sm lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%] ">Sale and purchase of precious metals mainly supplier of gold, we also buzy and/or sell other precious metals</h3>
+            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] lg:text-6xl text-base lg:w-11/12 w-full text font-bold  ">Benefit from the best prices for buying and selling precious metals.</h2>
+            <h3 className="text-white text-center absolute lg:text-3xl text-sm lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%] ">We mainly supply gold, coins and bars, but also all kinds of precious metals.</h3>
         </div>
       <div id="transfer" className='lg:h-screen'>
       <MoneyGramEn></MoneyGramEn>
