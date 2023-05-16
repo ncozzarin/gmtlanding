@@ -56,44 +56,19 @@ export default function ChangeCardEn() {
   const [rates, setRates] = useState(null);
 
   useEffect(() => {
-    fetch('https://api-prod.ischange.li/v1/isscreen/login', {
+    fetch('https://exchange.ufc.ch/api/rates', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        user: 'gmtmanor20ois48',
-        password: 'vMOBcT/#Ctha0f',
-        cid: '00000048'
+        amount: '100',
+        from: 'CHF',
+        to: 'USD'
       })
     })
-      .then(res => res.json())
-      .then(
-        (result) => {
-          fetch('https://api-prod.ischange.li/v1/isscreen/rates', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${result.status.data.token}`
-            },
-            body: JSON.stringify({
-              cid: '00000048',
-              checksum: result.status.data.checksum,
-              curr_list: 'EUR, USD , JPY, GBP, CAD'
-            })
-          })
-            .then(res => res.json())
-            .then(
-              (result) => {
-                setRates(result.status.data.rates)
-              },
-              (error) => {
-              }
-            );
-        },
-        (error) => {
-        }
-      );
+      .then(res => console.log(res.json()))
+      .catch(error => console.log(error))
 
   }, []);
 
