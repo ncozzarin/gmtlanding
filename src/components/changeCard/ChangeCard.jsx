@@ -58,8 +58,6 @@ export default function ChangeCardEn() {
     fetch('https://exchange.ufc.ch/api/rates?amount=100&from=CHF&to=USD', {
     })
       .then(res => console.log(res))
-      
-
   }, []);
 
   useEffect(()=>{
