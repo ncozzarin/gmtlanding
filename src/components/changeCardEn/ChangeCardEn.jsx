@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CurrencySelector from "../currencySelector/CurrencySelector";
 import MoneyInput from "../MoneyImput/MoneyImput";
+import axios from 'axios';
 
 const currency  = [
   {
@@ -27,7 +28,7 @@ const currency  = [
     avatar:'https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg',
     symbol: '£'
   },
-  {
+  /* {
     id: 5,
     name: 'JPY',
     avatar:'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png',
@@ -38,12 +39,11 @@ const currency  = [
     name: 'CAD',
     avatar:'https://www.worldatlas.com/img/flag/ca-flag.jpg',
     symbol:'CAD'
-  },
+  }, */
 ]
 
 export default function ChangeCardEn() {
 
-  // const getData = async () => await fetchData();
   const [currencyOption1, setCurrencyOption1] = useState(currency[1]);
   const [currencyOption2, setCurrencyOption2] = useState(currency[2]);
   const [value1, setValue1] = useState(1);
@@ -53,52 +53,36 @@ export default function ChangeCardEn() {
    const [options1, setOptions1] = useState(currency);
    const [options2, setOptions2] = useState(currency);
 
-  const [rates, setRates] = useState(null);
+   const fetchRates = async (fromCurrency, toCurrency, amount) => {
+    try {
+      const response = await axios.get('https://exchange.ufc.ch/api/rates', {
+        params: {
+          amount: amount,
+          from: fromCurrency,
+          to: toCurrency
+        },
+      });
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
-    fetch('https://exchange.ufc.ch/api/rates', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        amount: '100',
-        from: 'CHF',
-        to: 'USD'
-      })
-    })
-      .then(res => console.log(res.json()))
-      .catch(error => console.log(error))
-
+    fetchRates('CHF','EUR',1);
   }, []);
 
   useEffect(()=>{
     setOptions2(currency.filter(o => o.id !== currencyOption1.id));
     setOptions1(currency.filter(o => o.id !== currencyOption2.id));
-    if(rates){
-    changeCalculation1(value1);
-  }
-  }, [rates, currencyOption1, currencyOption2]);
+    changeCalculation1(value1, currencyOption1,currencyOption2);
+  }, [currencyOption1, currencyOption2]);
 
 
-  const changeCalculation1 = value => {
-    if(currencyOption1.name === 'CHF'){
-      const index = rates.findIndex(obj => obj.curr_code === currencyOption2.name);
-      if(value >= 1000 && currencyOption2.name === 'EUR'){
-        setValue2(value/rates[index].taux_VC)
-      } else {
-        setValue2(value/rates[index].taux_VA)
-      }
-    } else {
-      if(currencyOption2.name === 'CHF'){
-        const index = rates.findIndex(obj => obj.curr_code === currencyOption1.name);
-        setValue2(rates[index].taux_AA*value)
-      } else {
-      const INDEXa = rates.findIndex(obj => obj.curr_code === currencyOption1.name);
-      const indexV = rates.findIndex(obj => obj.curr_code === currencyOption2.name);
-      setValue2((rates[INDEXa].taux_AC*value)/rates[indexV].taux_VA)
-    }
-    }
+  const changeCalculation1 =  async (value) => {
+    const amount = await fetchRates(currencyOption1.name,currencyOption2.name,value);
+    setValue2(amount.data.converted_amount);
+      
   }
 
   const changeCalculation2 = value => {
@@ -114,9 +98,6 @@ export default function ChangeCardEn() {
   const swapFC = () => {
     const temp1 = currencyOption2;
     const temp2 = currencyOption1;
-    console.log(temp1)
-    console.log(temp2)
-
     setCurrencyOption1(temp1);
     setCurrencyOption2(temp2);
     setValue1(value2);

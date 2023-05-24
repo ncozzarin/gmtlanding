@@ -62,7 +62,6 @@ export default function ChangeCardEn() {
           from: fromCurrency,
           to: toCurrency
         },
-        mode: 'no-cors'
       });
       return response.data;
     } catch (error) {
