@@ -52,7 +52,7 @@ function EnglishComponent() {
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
       </div>
-      <div id="gold" className='lg:pt-48 pt-18 pb-20 '>
+      <div id="gold" className='lg:pt-48 pt-52 mt-200 pb-20 '>
         
       </div>
       <div className="relative">

@@ -51,7 +51,7 @@ function FrenchComponent() {
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
       </div>
-      <div id="gold" className='lg:pt-48 pt-32 lg:pb-20 pb-18'>
+      <div id="gold" className='lg:pt-48 pt-52 lg:pb-20 pb-18'>
       <div className="relative ">
       <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' alt="or avec un text" src={GoldBanner}></img>
             <h2 className="text-white absolute bottom-[70%] lg:bottom-[60%] left-[50%] text-center translate-x-[-50%] lg:text-6xl text-sm lg:w-11/12 w-full text font-bold">Bénéficiez des meilleurs prix pour l'achat et la vente de métaux précieux.</h2>
