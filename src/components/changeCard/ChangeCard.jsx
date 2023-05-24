@@ -28,7 +28,7 @@ const currency  = [
     avatar:'https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg',
     symbol: '£'
   },
-  {
+  /* {
     id: 5,
     name: 'JPY',
     avatar:'https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png',
@@ -39,12 +39,11 @@ const currency  = [
     name: 'CAD',
     avatar:'https://www.worldatlas.com/img/flag/ca-flag.jpg',
     symbol:'CAD'
-  },
+  }, */
 ]
 
 export default function ChangeCardEn() {
 
-  const getRates = () => {}
   const [currencyOption1, setCurrencyOption1] = useState(currency[1]);
   const [currencyOption2, setCurrencyOption2] = useState(currency[2]);
   const [value1, setValue1] = useState(1);
@@ -54,7 +53,6 @@ export default function ChangeCardEn() {
    const [options1, setOptions1] = useState(currency);
    const [options2, setOptions2] = useState(currency);
 
-  const [rates, setRates] = useState(null);
 
   const fetchRates = async (fromCurrency, toCurrency, amount) => {
     try {
@@ -79,10 +77,8 @@ export default function ChangeCardEn() {
   useEffect(()=>{
     setOptions2(currency.filter(o => o.id !== currencyOption1.id));
     setOptions1(currency.filter(o => o.id !== currencyOption2.id));
-    if(rates){
-    changeCalculation1(value1); // we need to call this function properly, without the if
-  }
-  }, [rates, currencyOption1, currencyOption2]);
+    changeCalculation1(value1, currencyOption1,currencyOption2);
+  }, [currencyOption1, currencyOption2]);
 
 
   const changeCalculation1 =  async (value) => {
