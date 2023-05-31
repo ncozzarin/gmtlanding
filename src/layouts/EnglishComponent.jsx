@@ -11,12 +11,28 @@ import Modal from '../components/modal/Modal';
 
 function EnglishComponent() {
   const [currentDay, setCurrentDate] = useState(new Date().getUTCDay());
-  const [showAboutModal, setShowAboutModal] = useState(false);
 
-  function handleAboutChange(newValue) {
-    console.log(newValue)
-    setShowAboutModal(newValue);
-    console.log(showAboutModal);
+  const [showPp, setShowPp] = useState(false);
+  const [showLicensing, setShowLicensing] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+  const [showFaq, setShowFaq] = useState(false);
+
+
+
+  function handlePpChange(newValue) {
+    setShowPp(newValue);
+  }
+
+  function handleShowLicensingChange(newValue) {
+    setShowLicensing(newValue);
+  }
+
+  function handlesetShowContact(newValue) {
+    setShowContact(newValue);
+  }
+
+  function handlesetShowFaqChange(newValue) {
+    setShowFaq(newValue);
   }
 
   useEffect(() => {
@@ -31,7 +47,14 @@ function EnglishComponent() {
       <div>
         <CardsEn></CardsEn>
       </div>
-      <Modal title="Hola mundo" text="This is a custom text for the modal." showModalProp={showAboutModal} setShowModal={handleAboutChange} />
+      <Modal 
+      title="Privacy Policy" 
+      text = {["At GMT SA, we take the protection of our customers' data very seriously. We know that your personal information is extremely important, which is why we have implemented robust security measures to protect your data from unauthorized access."," We are committed to respecting your privacy and treating your data with the utmost confidentiality. As a client of GMT SA, you can be assured that all information you provide to us is stored securely. We never disclose your information to third parties unless required by law or unless you give us express permission to do so. If you have any questions or concerns about the security of your information, please feel free to contact us to discuss them."]}
+      showModalProp={showPp} setShowModal={handlePpChange} />
+      <Modal title="Licensing" text={["GMT.SA is affiliated with ARIF (Association Romande des Intermédiaires Financiers) which fulfills the legal obligations of supervision and control towards our activity. ARIF is a self-regulatory organization recognized by the federal government and is subject to the supervision of the Swiss Financial Market Supervisory Authority FINMA."]} showModalProp={showLicensing} setShowModal={handleShowLicensingChange} />
+      <Modal title="Contact" text={["We are at your disposal for any information, you can reach us during office hours by phone at 022.738.87.77 (Bureau de change at Rue Rousseau 30) and at 022.310.93.63 (Bureau de change in Cours de Rive 4)"]} showModalProp={showContact} setShowModal={handlesetShowContact} />
+      <Modal title="FAQ" 
+      text={["Do I need to show an ID to make a money exchange transaction ? No. For amounts less than CHF 5,000, you don't need any identification.You just have to go to the office with the amount you want to exchange. For amounts over CHF 5,000, you must identify yourself at our counters by presenting an original and valid identity document.","Do I have to prove where the funds come from in order to carry out a money exchange transaction? For amounts over CHF 15,000, you must indicate the origin of the funds when you identify yourself at our sales counters.","How can I block the rate? You just have to fill in our form by clicking here. Once you click on 'validate' the rate will be blocked for you for 3 hours and you can go to one of our branches. Once the rate is locked, can I still get another rate? The rate you have blocked is reserved for you for 3 hours, after this time you can block a rate again. But if you don't want to use the first blocked rate anymore, you just have to unblock it to set another rate.","Do I need to show identification to buy precious metals? You do not need to show any identification for purchases of less than CHF 15,000. beyond this threshold, you must identify yourself at our counters by presenting an original and valid ID.","When I buy a precious metal, can I get it right away? This will depend on the stock. For information you can call one of our agencies, in Rousseau: 022.738.87.77 or in Rive: 022.310.93.63 or you can go directly to the store.","Do I need to show identification to make a transfer with Money Gram? Yes, you need to identify yourself at our counters by presenting an original and valid ID."]} showModalProp={showFaq} setShowModal={handlesetShowFaqChange} />
       <div className='lg:h-screen' id="company">
       <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700 ">GMT CHANGE</h2>
       <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
@@ -75,7 +98,7 @@ function EnglishComponent() {
       <div id="transfer" className='lg:h-screen'>
       <MoneyGramEn></MoneyGramEn>
       </div>
-      <FooterEn setAbout={handleAboutChange}></FooterEn>
+      <FooterEn setPp={setShowPp} setLicensing={setShowLicensing} setContact={setShowContact} setFaq={setShowFaq} ></FooterEn>
       </div></>
   );
 }
