@@ -6,10 +6,18 @@ import MoneyGramEn from '../components/moneyGramEn/moneyGramEn';
 import FooterEn from '../components/footerEn/FooterEn';
 import NavBarEn from '../components/headerEn/NavBarEn';
 import { useEffect, useState } from 'react';
+import Modal from '../components/modal/Modal';
 
 
 function EnglishComponent() {
   const [currentDay, setCurrentDate] = useState(new Date().getUTCDay());
+  const [showAboutModal, setShowAboutModal] = useState(false);
+
+  function handleAboutChange(newValue) {
+    console.log(newValue)
+    setShowAboutModal(newValue);
+    console.log(showAboutModal);
+  }
 
   useEffect(() => {
     setInterval(() => {
@@ -23,6 +31,7 @@ function EnglishComponent() {
       <div>
         <CardsEn></CardsEn>
       </div>
+      <Modal title="Hola mundo" text="This is a custom text for the modal." showModalProp={showAboutModal} setShowModal={handleAboutChange} />
       <div className='lg:h-screen' id="company">
       <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700 ">GMT CHANGE</h2>
       <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
@@ -66,7 +75,7 @@ function EnglishComponent() {
       <div id="transfer" className='lg:h-screen'>
       <MoneyGramEn></MoneyGramEn>
       </div>
-      <FooterEn></FooterEn>
+      <FooterEn setAbout={handleAboutChange}></FooterEn>
       </div></>
   );
 }
