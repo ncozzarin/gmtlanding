@@ -17,8 +17,6 @@ function EnglishComponent() {
   const [showContact, setShowContact] = useState(false);
   const [showFaq, setShowFaq] = useState(false);
 
-
-
   function handlePpChange(newValue) {
     setShowPp(newValue);
   }
@@ -61,10 +59,9 @@ function EnglishComponent() {
       <h3  className="px-3 pt-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">With more than 25 years of experience, GMT SA is the market leader in foreign currency exchange, money transfers and the purchase and sale of precious metals.  </h3>
       <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Determined to offer competitive rates and provide superior service, our goal is to fully satisfy our clients and provide them with a pleasant experience when dealing with us.  </h3>
       <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">We strive to stay on top of the market in order to continue to offer great exchange rates, tailored to the needs of each individual.</h3>
-      <div className='flex items-center'>
-        <button>a</button>
-        <button>b</button>
-
+      <div className='lg:flex lg:flex-row flex-col justify-center lg:space-x-40 pt-8'>
+        <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Fix Rate</a>
+        <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Find agencies</a>
       </div>
       <div  className='pt-16'>
         <MapsEn></MapsEn>

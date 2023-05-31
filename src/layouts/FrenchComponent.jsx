@@ -59,6 +59,10 @@ function FrenchComponent() {
       <h3  className="px-3 pt-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Avec plus de 25 ans d'expérience, GMT SA est leader sur le marché du change monétaire en devises étrangères, de transferts d'argent ainsi que l'achat et la vente de métaux précieux. </h3>
       <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Déterminés à offrir des taux compétitifs et à fournir un service de qualité supérieure, notre objectif est de satisfaire pleinement nos clients et de leur offrir une expérience agréable lors de leurs transactions avec nous. </h3>
       <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Tous nos efforts sont déployés pour rester à la pointe du marché dans le but de continuer à offrir des taux de change avantageux, adaptés aux besoins de chacun.</h3>
+      <div className='lg:flex lg:flex-row flex-col justify-center lg:space-x-40 pt-8'>
+        <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Fixer Taux</a>
+        <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Trouver agences</a>
+      </div>
       <div className='pt-16'>
         <Maps></Maps>
       </div>
