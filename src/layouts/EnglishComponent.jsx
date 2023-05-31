@@ -26,7 +26,10 @@ function EnglishComponent() {
       <div className='lg:h-screen' id="company">
       <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700 ">GMT CHANGE</h2>
       <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
-      <h3  className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Change - Precious metals - Money transfers</h3>
+      <h3  className="px-3 pt-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">With more than 25 years of experience, GMT SA is the market leader in foreign currency exchange, money transfers and the purchase and sale of precious metals.  </h3>
+      <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Determined to offer competitive rates and provide superior service, our goal is to fully satisfy our clients and provide them with a pleasant experience when dealing with us.  </h3>
+      <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">We strive to stay on top of the market in order to continue to offer great exchange rates, tailored to the needs of each individual.</h3>
+
       <div  className='pt-16'>
         <MapsEn></MapsEn>
       </div>

@@ -25,7 +25,9 @@ function FrenchComponent() {
       <div id="company" className='lg:h-screen'>
       <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700">GMT CHANGE</h2>
       <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
-      <h3 className="px-3 py-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Vos bureaux de change à Genève.</h3>
+      <h3  className="px-3 pt-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Avec plus de 25 ans d'expérience, GMT SA est leader sur le marché du change monétaire en devises étrangères, de transferts d'argent ainsi que l'achat et la vente de métaux précieux. </h3>
+      <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Déterminés à offrir des taux compétitifs et à fournir un service de qualité supérieure, notre objectif est de satisfaire pleinement nos clients et de leur offrir une expérience agréable lors de leurs transactions avec nous. </h3>
+      <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Tous nos efforts sont déployés pour rester à la pointe du marché dans le but de continuer à offrir des taux de change avantageux, adaptés aux besoins de chacun.</h3>
       <div className='pt-16'>
         <Maps></Maps>
       </div>
