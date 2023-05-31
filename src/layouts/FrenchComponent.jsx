@@ -6,10 +6,33 @@ import GoldBanner from '../assets/gold-banner.webp';
 import MoneyGram from '../components/moneyGram/moneyGram';
 import Footer from '../components/footer/Footer';
 import { useEffect, useState } from 'react';
+import Modal from '../components/modal/Modal';
 
 
 function FrenchComponent() {
   const [currentDay, setCurrentDate] = useState(new Date().getUTCDay());
+
+  const [showPp, setShowPp] = useState(false);
+  const [showLicensing, setShowLicensing] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+  const [showFaq, setShowFaq] = useState(false);
+
+  function handlePpChange(newValue) {
+    setShowPp(newValue);
+  }
+
+  function handleShowLicensingChange(newValue) {
+    setShowLicensing(newValue);
+  }
+
+  function handlesetShowContact(newValue) {
+    setShowContact(newValue);
+  }
+
+  function handlesetShowFaqChange(newValue) {
+    setShowFaq(newValue);
+  }
+
 
   useEffect(() => {
     setInterval(() => {
@@ -22,6 +45,14 @@ function FrenchComponent() {
       <div>
         <Cards></Cards>
       </div>
+      <Modal 
+      title="Privacy Policy" 
+      text = {["Chez GMT SA,  nous prenons très au sérieux la protection des données de nos clients. Nous savons que vos informations personnelles sont extrêmement importantes, c'est pourquoi nous avons mis en place des mesures de sécurité robustes pour protéger vos données contre tout accès non autorisé. Nous nous engageons à respecter votre vie privée et à traiter vos données avec la plus grande confidentialité.","En tant que client de GMT SA, vous pouvez être assuré que toutes les informations que vous nous fournissez sont stockées en toute sécurité. Nous ne divulguons jamais vos informations à des tiers, sauf si cela est requis par la loi ou si vous nous en donnez la permission expresse.Si vous avez des questions ou des préoccupations concernant la sécurité de vos informations, n'hésitez pas à nous contacter pour en discuter."]}
+      showModalProp={showPp} setShowModal={handlePpChange} />
+      <Modal title="Licensing" text={["GMT.SA est affilié à ARIF ( Association Romande des Intermédiaires Financiers) qui remplit les obligations légales de surveillance et de contrôle envers notre activité. ARIF est un organisme d’autorégulation reconnu par le gouvernement fédéral qui est soumis à la surveillance de l’Autorité fédérale de surveillance des marchés financiers FINMA."]} showModalProp={showLicensing} setShowModal={handleShowLicensingChange} />
+      <Modal title="Contact" text={["à votre disposition pour tout renseignement, vous pouvez nous joindre pendant les heures de bureau par téléphone au 022.738.87.77 (Bureau de changeà la Rue Rousseau 30 ) et au 022.310.93.63 (Bureau de change en Cours de Rive 4)"]} showModalProp={showContact} setShowModal={handlesetShowContact} />
+      <Modal title="FAQ" 
+      text={["Dois-je présenter une pièce d'identité pour effectuer une transaction de change d'argent ? Pour des montants inférieurs à Frs 5000.- il n'y a pas besoin de pièce d'identité. Il suffit simplement de vous rendre sur place avec le montant que vous souhaitez changer. A partir de Frs 5'000.- vous devez vous identifier auprès de nos guichets en présentant une pièce d'identité en version originale et en cours de validité."," Dois-je prouver d'où proviennent les fonds pour pouvoir effectuer une transaction de change d'argent ? Pour les montants supérieurs à Frs 15'000.- vous devez indiquez l'origine des fonds lors de votre identification auprès de nos guichets de vente.","Comment puis-je bloquer le taux ? Il vous suffit de remplir notre formulaire en cliquant ici. Une fois que vous aurez cliquer sur 'valider' le taux sera bloqué pour vous pendant 3h et vous pourrez vous rendre dans l'une de nos agence.","Est-ce qu'une fois que le taux est bloqué je peux quand même bénéficier d'un autre taux ? Le taux que vous avez bloqué vous est réservé durant 3h, passé ce délais  vous pourrez à nouveau bloquer un taux. Mais si vous souhaitez ne plus utiliser le premier taux bloquée, vous n'avez qu'à le débloquer pour fixer un autre taux. ","Dois-je présenter un papier d'identité pour acheter des métaux précieux ? Il n'y a pas besoin de présenter de pièce d'identité pour les achats inférieurs à Frs 15'000.- Ce seuil dépassé, vous devez vous identifier auprès de nos guichets en présentant une pièce d'identité en version originale et en cours de validité.","Lors que j'achète un métal précieux est-ce que je peux l'obtenir tout de suite ? Cela dépendera du stock. Pour vous renseigner vous pouvez appeler l'une de nos agences, à Rousseau : 022.738.87.77 ou à Rive : 022.310.93.63 ou bien vous rendre directement sur place.","Dois-je présenter une pièce d'identité pour effetuer un transfert avec Money Gram ? Oui, vous devez vous identifier auprès de nos guichets en présentant une pièce d'identité en version originale et en cours de validité."]} showModalProp={showFaq} setShowModal={handlesetShowFaqChange} />
       <div id="company" className='lg:h-screen'>
       <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700">GMT CHANGE</h2>
       <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
@@ -63,7 +94,7 @@ function FrenchComponent() {
       <div className='lg:h-screen' id="transfer">
         <MoneyGram></MoneyGram>
       </div>
-      <Footer></Footer>
+      <Footer setPp={setShowPp} setLicensing={setShowLicensing} setContact={setShowContact} setFaq={setShowFaq} ></Footer>
     </div>
 
     </>
