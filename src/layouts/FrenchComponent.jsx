@@ -56,10 +56,10 @@ function FrenchComponent() {
       <div id="company" className='lg:h-screen'>
       <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700">GMT CHANGE</h2>
       <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
-      <h3  className="px-3 pt-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Avec plus de 25 ans d'expérience, GMT SA est leader sur le marché du change monétaire en devises étrangères, de transferts d'argent ainsi que l'achat et la vente de métaux précieux. </h3>
-      <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Déterminés à offrir des taux compétitifs et à fournir un service de qualité supérieure, notre objectif est de satisfaire pleinement nos clients et de leur offrir une expérience agréable lors de leurs transactions avec nous. </h3>
-      <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Tous nos efforts sont déployés pour rester à la pointe du marché dans le but de continuer à offrir des taux de change avantageux, adaptés aux besoins de chacun.</h3>
-      <div className='lg:flex lg:flex-row flex-col justify-center lg:space-x-40 pt-8'>
+      <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500  ">Avec plus de 25 ans d'expérience, GMT SA est leader sur le marché du change monétaire en devises étrangères, de transferts d'argent ainsi que l'achat et la vente de métaux précieux. </h3>
+      <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500  ">Déterminés à offrir des taux compétitifs et à fournir un service de qualité supérieure, notre objectif est de satisfaire pleinement nos clients et de leur offrir une expérience agréable lors de leurs transactions avec nous. </h3>
+      <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500  ">Tous nos efforts sont déployés pour rester à la pointe du marché dans le but de continuer à offrir des taux de change avantageux, adaptés aux besoins de chacun.</h3>
+      <div className='flex lg:flex-row flex-col justify-center items-center	 lg:space-x-40 space-y-10 lg:space-y-0 pt-8'>
         <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Fixer Taux</a>
         <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Trouver agences</a>
       </div>
@@ -88,7 +88,7 @@ function FrenchComponent() {
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
       </div>
-      <div id="gold" className='lg:pt-48 pt-52 lg:pb-20 pb-18'>
+      <div id="gold" className='lg:pt-80 pt-96 mt-60 lg:pb-20 pb-18'>
       <div className="relative ">
       <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' alt="or avec un text" src={GoldBanner}></img>
             <h2 className="text-white absolute bottom-[70%] lg:bottom-[60%] left-[50%] text-center translate-x-[-50%] lg:text-6xl text-sm lg:w-11/12 w-full text font-bold">Bénéficiez des meilleurs prix pour l'achat et la vente de métaux précieux.</h2>

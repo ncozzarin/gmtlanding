@@ -21,9 +21,9 @@ const closeModal = () => {
     >
           <div
              onPressOut={() => {closeModal()}}
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="justify-center items-center h-screen flex overflow-x-hidden overflow-y-auto fixed inset-0 z-0 outline-none focus:outline-none"
           >
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-auto h-96 my-6 mx-auto max-w-3xl">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
@@ -38,7 +38,7 @@ const closeModal = () => {
                     {text.map((item, index) => (
                       <><p
                             key={index}
-                            className="px-3 pt-2 m-auto font-light text-center text-xl items-center leading-snug text-neutral-500"
+                            className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500"
                         >
                             {item}
                         </p><br /></>
