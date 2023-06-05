@@ -55,8 +55,8 @@ return (
           <div className="relative r ">
             <img src={featuredImages[currentIndex].content} alt={featuredImages[currentIndex].alt} className=" rounded-r-xl rounded-tr-xl drop-shadow-xl w-full rounded-b-xl object-cover" preload="true" as="image" />
             <div className="absolute lg:bottom-[40%] bottom-[30%] left-[15%]">
-            <h2 className="text-white lg:text-6xl text-base  font-bold  ">{featuredImages[currentIndex].Title}</h2>
-            <h3 className="text-white  lg:text-6xl text-base ">{featuredImages[currentIndex].Subtitle}</h3>
+            <h2 className="text-white md:text-xl lg:text-6xl text-base  font-bold  ">{featuredImages[currentIndex].Title}</h2>
+            <h3 className="text-white md:text-xl lg:text-6xl text-base ">{featuredImages[currentIndex].Subtitle}</h3>
             </div>
           </div>
           <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start lg:px-3">

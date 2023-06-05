@@ -56,7 +56,7 @@ function FrenchComponent() {
       <div id="company" className='lg:h-screen'>
       <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700">GMT CHANGE</h2>
       <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
-      <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500  ">Avec plus de 25 ans d'expérience, GMT SA est leader sur le marché du change monétaire en devises étrangères, de transferts d'argent ainsi que l'achat et la vente de métaux précieux. </h3>
+      <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500">Avec plus de 25 ans d'expérience, GMT SA est leader sur le marché du change monétaire en devises étrangères, de transferts d'argent ainsi que l'achat et la vente de métaux précieux. </h3>
       <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500  ">Déterminés à offrir des taux compétitifs et à fournir un service de qualité supérieure, notre objectif est de satisfaire pleinement nos clients et de leur offrir une expérience agréable lors de leurs transactions avec nous. </h3>
       <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500  ">Tous nos efforts sont déployés pour rester à la pointe du marché dans le but de continuer à offrir des taux de change avantageux, adaptés aux besoins de chacun.</h3>
       <div className='flex lg:flex-row flex-col justify-center items-center	 lg:space-x-40 space-y-10 lg:space-y-0 pt-8'>
@@ -67,7 +67,7 @@ function FrenchComponent() {
         <Maps></Maps>
       </div>
       </div>
-      <div className='pt-16 h-screen' id="change">
+      <div className='lg:pt-80 h-screen' id="change">
         <CurrencyConverter></CurrencyConverter>
         <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700">HORAIRES D'OUVERTURE</h2>
           <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12 max-w-{20px} drop-shadow-xl" />
@@ -88,11 +88,11 @@ function FrenchComponent() {
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
       </div>
-      <div id="gold" className='lg:pt-80 pt-96 mt-60 lg:pb-20 pb-18'>
+      <div id="gold" className='lg:pt-80 md:pt-10 sm:pt-20 pt-96 mt-60 lg:pb-20 pb-18'>
       <div className="relative ">
       <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' alt="or avec un text" src={GoldBanner}></img>
-            <h2 className="text-white absolute bottom-[70%] lg:bottom-[60%] left-[50%] text-center translate-x-[-50%] lg:text-6xl text-sm lg:w-11/12 w-full text font-bold">Bénéficiez des meilleurs prix pour l'achat et la vente de métaux précieux.</h2>
-            <h3 className="text-white text-center absolute lg:text-3xl text-xs lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%]">Nous fournissons principalement de l'or, pièces et lingots, mais aussi toutes sortes de métaux précieux.</h3>
+            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] md:text-xl lg:text-6xl text-base lg:w-11/12 w-full text font-bold ">Bénéficiez des meilleurs prix pour l'achat et la vente de métaux précieux.</h2>
+            <h3 className="text-white text-center absolute md:text-xl lg:text-6xl text-sm lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%] ">Nous fournissons principalement de l'or, pièces et lingots, mais aussi toutes sortes de métaux précieux.</h3>
         </div>
         </div>
       <div className='lg:h-screen' id="transfer">

@@ -56,9 +56,9 @@ function EnglishComponent() {
       <div className='lg:h-screen' id="company">
       <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700 ">GMT CHANGE</h2>
       <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12  drop-shadow-xl" />
-      <h3  className="px-3 pt-2 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">With more than 25 years of experience, GMT SA is the market leader in foreign currency exchange, money transfers and the purchase and sale of precious metals.  </h3>
-      <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">Determined to offer competitive rates and provide superior service, our goal is to fully satisfy our clients and provide them with a pleasant experience when dealing with us.  </h3>
-      <h3  className="px-3 py-0 m-auto font-light text-center text-2xl items-center leading-snug text-neutral-500 ">We strive to stay on top of the market in order to continue to offer great exchange rates, tailored to the needs of each individual.</h3>
+      <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500 ">With more than 25 years of experience, GMT SA is the market leader in foreign currency exchange, money transfers and the purchase and sale of precious metals.  </h3>
+      <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500 ">Determined to offer competitive rates and provide superior service, our goal is to fully satisfy our clients and provide them with a pleasant experience when dealing with us.  </h3>
+      <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500">We strive to stay on top of the market in order to continue to offer great exchange rates, tailored to the needs of each individual.</h3>
       <div className='flex lg:flex-row flex-col justify-center items-center	 lg:space-x-40 space-y-10 lg:space-y-0 pt-8'>
         <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Fix Rate</a>
         <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Find agencies</a>
@@ -67,7 +67,7 @@ function EnglishComponent() {
         <MapsEn></MapsEn>
       </div>
       </div>
-      <div id="change" className='pt-16 h-screen'>
+      <div id="change" className='lg:pt-80 h-screen'>
         <CurrencyConverterEn></CurrencyConverterEn>
           <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700 ">OPENING HOURS</h2>
           <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12 max-w-{20px} drop-shadow-xl" />
@@ -88,13 +88,13 @@ function EnglishComponent() {
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
       </div>
-      <div id="gold" className='lg:pt-80 pt-96 mt-60 lg:pb-20 pb-18 '>
+      <div id="gold" className='lg:pt-80 md:pt-10 sm:pt-20 pt-96 mt-60 lg:pb-20 pb-18 '>
         
       </div>
       <div className="relative">
       <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' alt="gold background with text" src={GoldBanner}></img>
-            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] lg:text-6xl text-base lg:w-11/12 w-full text font-bold  ">Benefit from the best prices for buying and selling precious metals.</h2>
-            <h3 className="text-white text-center absolute lg:text-3xl text-sm lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%] ">We mainly supply gold, coins and bars, but also all kinds of precious metals.</h3>
+            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] md:text-xl lg:text-6xl text-base lg:w-11/12 w-full text font-bold  ">Benefit from the best prices for buying and selling precious metals.</h2>
+            <h3 className="text-white text-center absolute md:text-xl lg:text-6xl text-sm lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%] ">We mainly supply gold, coins and bars, but also all kinds of precious metals.</h3>
         </div>
       <div id="transfer" className='lg:h-screen'>
       <MoneyGramEn></MoneyGramEn>
