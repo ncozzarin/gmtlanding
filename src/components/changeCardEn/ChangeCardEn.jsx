@@ -131,8 +131,8 @@ export default function ChangeCardEn() {
               </div>
           </div>
           <div className="sm:flex sm:justify-center sm:mt-4 hidden">
-          <a href={exchangeURL} className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-1/4 mt-2 text-blue-700 '>Fixer Taux</a>
-</div>
+            <a href={exchangeURL} className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-1/4 mt-2 text-blue-700 '>Fixer Taux</a>
+          </div>
 
           <div className="sm:hidden flex-col space-y-6">
             <div className="flex space-x-4 flex">
