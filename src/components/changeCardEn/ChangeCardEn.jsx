@@ -48,6 +48,8 @@ export default function ChangeCardEn() {
   const [currencyOption2, setCurrencyOption2] = useState(currency[2]);
   const [value1, setValue1] = useState(1);
   const [value2, setValue2] = useState(0);
+  const [exchangeURL, setExchangeURL] = useState("https://exchange.ufc.ch/?amount=100&from=CHF&to=USD");
+
 
    // currencies options for both selectors
    const [options1, setOptions1] = useState(currency);
@@ -82,7 +84,7 @@ export default function ChangeCardEn() {
   const changeCalculation1 =  async (value) => {
     const amount = await fetchRates(currencyOption1.name,currencyOption2.name,value);
     setValue2(amount.data.converted_amount);
-      
+    setExchangeURL(`https://exchange.ufc.ch/?amount=${value}&from=${currencyOption1.name}&to=${currencyOption2.name}`);
   }
 
   const changeCalculation2 = value => {
@@ -147,6 +149,9 @@ export default function ChangeCardEn() {
               <MoneyInput value={value2} disabled currency={currencyOption2.symbol} onChange={e => changeCalculation2(e.target.value)}></MoneyInput>
             </div>
             </div>
+              <div className="flex space-x-4">
+                <a href={exchangeURL} className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-full  text-blue-700 '>Fixer Taux</a>
+              </div>
             </div>
       </div>
       </>

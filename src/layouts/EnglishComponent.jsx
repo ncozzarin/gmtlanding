@@ -59,16 +59,14 @@ function EnglishComponent() {
       <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500 ">With more than 25 years of experience, GMT SA is the market leader in foreign currency exchange, money transfers and the purchase and sale of precious metals.  </h3>
       <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500 ">Determined to offer competitive rates and provide superior service, our goal is to fully satisfy our clients and provide them with a pleasant experience when dealing with us.  </h3>
       <h3  className="lg:px-12 px-2 lg:pt-12 pt-4 m-auto font-light text-center lg:text-2xl text-base items-center leading-snug text-neutral-500">We strive to stay on top of the market in order to continue to offer great exchange rates, tailored to the needs of each individual.</h3>
-      <div className='flex lg:flex-row flex-col justify-center items-center	 lg:space-x-40 space-y-10 lg:space-y-0 pt-8'>
-        <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Fix Rate</a>
-        <a href="https://exchange.ufc.ch/" className='border-2 text-center rounded-r-md rounded-tr-md rounded-b-md p-2 w-40 text-blue-700 '>Find agencies</a>
-      </div>
+
       <div  className='pt-16'>
         <MapsEn></MapsEn>
       </div>
       </div>
       <div id="change" className='lg:pt-80 h-screen'>
         <CurrencyConverterEn></CurrencyConverterEn>
+
           <h2 className="font-bold text-center lg:text-4xl text-xl pt-16 text-blue-700 ">OPENING HOURS</h2>
           <hr className="border-2 mt-6 m-auto border-yellow-500 w-1/12 max-w-{20px} drop-shadow-xl" />
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
