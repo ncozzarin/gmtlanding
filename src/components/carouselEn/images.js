@@ -11,7 +11,7 @@ export default [
     },
     {
     content: ContentTourist,
-    Title: "Benefit from the best exchange rates",
+    Title: "Benefit from best exchange rates",
     Subtitle:"during your stay in Geneva",
     alt:"image with geneva jet d'eau"
     },

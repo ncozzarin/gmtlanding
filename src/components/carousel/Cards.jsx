@@ -55,17 +55,17 @@ return (
         <div className=" mx-auto object-fill " ref={slideRef}>
         <div className="relative cursor-pointer ">
             <img src={featuredImages[currentIndex].content} alt={featuredImages[currentIndex].alt} className=" w-full rounded-r-xl rounded-tr-xl drop-shadow-xl  rounded-b-xl object-cover" preload="true" as="image" />
-            <div className="absolute lg:bottom-[40%] bottom-[30%] left-[15%]">
-            <h2 className="text-white lg:text-6xl text-base md:text-xl  font-bold  ">{featuredImages[currentIndex].Title}</h2>
-            <h3 className="text-white  lg:text-6xl text-base md:text-xl ">{featuredImages[currentIndex].Subtitle}</h3>
+            <div className="absolute lg:bottom-[40%] bottom-[30%] left-[14%]">
+            <h2 className="text-white lg:text-6xl text-sm md:text-xl  font-bold  ">{featuredImages[currentIndex].Title}</h2>
+            <h3 className="text-white  lg:text-6xl text-sm md:text-xl ">{featuredImages[currentIndex].Subtitle}</h3>
             </div>
           </div>
           <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start lg:px-3">
           <button onClick={handleOnPrevClick} aria-label="avant image" className=" text-white p-1 rounded-full bg-opacity-50 opacity-25 hover:opacity-100 cursor-pointer hover:hover:text-white transition">
-            <AiOutlineLeft size={50} />
+            <AiOutlineLeft size={40} />
           </button>
           <button onClick={handleOnPrevClick} aria-label="prochaine image" className=" text-white p-1 rounded-full opacity-25 bg-opacity-50 cursor-pointer hover:opacity-100 transition">
-            <AiOutlineRight size={50} />
+            <AiOutlineRight size={40} />
           </button>
         </div>
         </div>

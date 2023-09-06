@@ -84,10 +84,10 @@ function FrenchComponent() {
           </div>
           <hr className="border-1 mt-6 m-auto border-neutral-500/50 lg:w-3/6" />
       </div>
-      <div id="gold" className='lg:pt-80 md:pt-10 sm:pt-20 pt-96 mt-60 lg:pb-20 pb-18'>
+      <div id="gold" className='lg:pt-80 md:pt-10 sm:pt-20 pt-96 max-[320px]:pt-[40rem] mt-60 lg:pb-20 pb-18'>
       <div className="relative ">
-      <img className=' rounded-r-xl rounded-tr-xl w-full	rounded-b-xl' alt="or avec un text" src={GoldBanner}></img>
-            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] md:text-xl lg:text-6xl text-base lg:w-11/12 w-full text font-bold ">Bénéficiez des meilleurs prix pour l'achat et la vente de métaux précieux.</h2>
+      <img className=' rounded-r-xl rounded-tr-xl w-full max-[320px]:h-40	rounded-b-xl' alt="or avec un text" src={GoldBanner}></img>
+            <h2 className="text-white absolute bottom-[60%] left-[50%] text-center translate-x-[-50%] md:text-xl lg:text-6xl text-sm lg:w-11/12 w-full text font-bold ">Bénéficiez des meilleurs prix pour l'achat et la vente de métaux précieux.</h2>
             <h3 className="text-white text-center absolute md:text-xl lg:text-6xl text-sm lg:bottom-[30%] bottom-[10%] left-[50%] lg:w-11/12 w-full translate-x-[-50%] ">Nous fournissons principalement de l'or, pièces et lingots, mais aussi toutes sortes de métaux précieux.</h3>
         </div>
         </div>
